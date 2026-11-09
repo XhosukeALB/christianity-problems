@@ -28,7 +28,8 @@ if (fs.existsSync(DIST_DIR)) {
 fs.mkdirSync(DIST_DIR);
 
 // 3. Copy assets
-const assets = ['cards.js', 'translations.js', 'translations.json'];
+// Added '_redirects' to the list
+const assets = ['cards.js', 'translations.js', 'translations.json', '_redirects'];
 assets.forEach(file => {
   if (fs.existsSync(path.join(__dirname, file))) {
     fs.copyFileSync(path.join(__dirname, file), path.join(DIST_DIR, file));
