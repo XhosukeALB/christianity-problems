@@ -1,0 +1,12 @@
+{
+  "name": "christianity-problems",
+  "version": "1.0.0",
+  "description": "An evidence deck of Christianity's problems.",
+  "main": "build.js",
+  "scripts": {
+    "build": "node build.js",
+    "start": "npx serve dist"
+  },
+  "author": "",
+  "license": "MIT"
+}
