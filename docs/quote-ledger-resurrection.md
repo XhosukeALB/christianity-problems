@@ -75,3 +75,20 @@ If a future edit adds a quotation from a modern scholar, it must be checked agai
 - **No new direct quotations** from modern scholars were introduced. Earman, Swinburne, Wright and Licona are paraphrased or cited by title; the only new biblical quotation (Hosea 6:2) was checked against the ESV.
 
 Footnotes are now 30 in total, renumbered in order of appearance; every reference/backlink pair was checked.
+
+## Objections follow-up (23 November 2026)
+
+- **Objection 5.** “Decades later” was changed to “Paul reports their experience in the mid-50s, though the tradition he cites is earlier,” matching the c. 54–55 date and the early-creed argument.
+- **Objection 6.** The reply is now labelled “A possible mechanism,” and it states what would make the mechanism plausible: independent evidence that the community was already reading Hosea 6:2, Daniel 12:2 and Isaiah 53 as a resurrection script before the appearances, or that the “third day” formula predates the appearance traditions. The evidence is described as indirect.
+- **Objection 7.** The reply now concedes that Paul the persecutor is the hardest case for a purely vision-based account and gives a speculative naturalistic reading (scriptural conviction, visionary experience, and social pull), explicitly flagged as a hypothesis rather than a demonstrated mechanism.
+- **Objection 1.** “The delay” was clarified as the gap between the events and the first written Gospels, and “guards” was removed from the list of auxiliaries.
+- **Wright/Licona duplication.** The inline objection in the appearances section was removed. The single treatment is Objection 4, which now contains the linguistic point about *pneumatikos* and the argument-from-silence caveat. Footnotes were renumbered accordingly.
+- **Prior-probability passage.** Moved before the naturalistic section. The claim and verdict now say “on a naturalistic prior.”
+- **Closing.** “The conclusion follows” was changed to “the evidence supports the conclusion.”
+- **Akouō.** The genitive/accusative observation is now presented as disputed, not as a settled solution. Source checked: Horst R. Moehring, “The Verb Akouein in Acts IX 7 and XXII 9,” *Novum Testamentum* 3 (1959): 80–99; the article argues that Luke uses both constructions without a difference in meaning. The case difference itself is visible in the SBLGNT (Acts 9:7 genitive; 22:9 accusative), checked at Bible Gateway. BDAG is retained for the lexical senses.
+- **Swinburne.** Citation verified as *The Existence of God*, 2nd ed. (Clarendon Press, 2004), ch. 12, “Arguments from history and miracles” (p. 273), against library catalogue records. Earman remains checked at Google Books.
+- **Hosea 6:2.** The new quotation was checked against the ESV and is exact. Daniel 12:2 and Isaiah 53 are paraphrased, not quoted.
+- **Duplicate heading.** One “The prior-probability assumption” label and one “Strongest objections to this essay’s conclusion” heading remain; the earlier duplication was a formatting artifact in the chat message.
+- **No unconfirmed quotations.** No direct quotation from a modern scholar was introduced in this round.
+
+Footnotes are now 31, renumbered in order of appearance.
