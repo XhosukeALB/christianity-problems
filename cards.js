@@ -154,7 +154,7 @@ window.DECK = {
       "summary": "The earliest creed, the empty tomb, the appearances, the minimal facts, and the naturalistic alternatives: a calibrated case against Christianity’s load-bearing claim.",
       "verdict": "Virtually certain: Jesus was crucified under Pilate, and some followers had experiences they interpreted as appearances. Very likely: those experiences were real to them and transformed the movement. Probable: the empty-tomb narrative is first attested after Paul and is literarily shaped. Not established: a bodily resurrection, or the Easter sequence. Possible but not probable: the resurrection as the best historical explanation.",
       "updated": "2026-11-23",
-      "readingTime": 21,
+      "readingTime": 23,
       "body": `<section id="stakes">
       <h2>What Christianity stakes on the resurrection</h2>
       <p>Christianity is not primarily a moral code or a philosophy of life. It is a proclamation about an event: God raised Jesus of Nazareth from the dead. Paul makes the stakes explicit. If Christ has not been raised, he writes, “your faith is futile and you are still in your sins”; the dead in Christ have perished, and Christians are “of all people most to be pitied.”<sup class="fn"><a href="#fn1" id="ref1">1</a></sup></p>
@@ -370,16 +370,16 @@ window.DECK = {
       
       <section id="objections">
       <h2>Strongest objections to this essay’s conclusion</h2>
-      <p>A case is only as strong as the objections it can answer. These are the strongest objections to the conclusion defended here, and the replies that seem to me adequate.</p>
+      <p>A case is only as strong as the objections it can answer. These are the strongest objections to the conclusion defended here.</p>
       <div class="objection">
       <p class="label">Objection 1 · The resurrection is the best explanation</p>
       <p>Licona and Craig argue that the resurrection explains the empty tomb, the appearances, and the transformation of the disciples in one stroke, while the naturalistic alternatives are piecemeal and leave data unexplained.<sup class="fn"><a href="#fn27" id="ref27">27</a></sup></p>
-      <p class="reply"><strong>Reply.</strong> Explanatory scope is real, but it is not sufficient. The empty tomb is not secure, the appearances are vision-like in the earliest source, and the transformation can be explained by religious experience and group dynamics. A unified explanation is preferable only if its prior is not prohibitively low and its evidence is independent; here the evidence is late, internal, and confessional.</p>
+      <p class="reply"><strong>Reply.</strong> The objection is right about scope. The resurrection explains the empty tomb, the appearances, and the transformation of the disciples in one hypothesis, and on a theistic prior it also has high plausibility: a God who acts in history could raise Jesus. It is weaker on explanatory power and ad hocness. It explains the appearances fully only if they were physical, which the earliest source does not say; it leaves Paul’s silence about the tomb, the divergence of the Gospel narratives, and the delay unexplained; and it needs auxiliary assumptions—an empty tomb, guards, a physical body, reliable later testimony—that are not independently attested. A piecemeal naturalistic account can still be better supported than a unified hypothesis whose auxiliaries are unverified. On theism the hypothesis scores well; the disagreement is about the prior and about whether the later narratives can bear the weight placed on them.</p>
       </div>
       <div class="objection">
       <p class="label">Objection 2 · The Humean prior begs the question</p>
       <p>If one already believes in a God who acts in history, the prior probability of a resurrection is not low, and the essay’s conclusion is an artifact of a secular starting point.</p>
-      <p class="reply"><strong>Reply.</strong> The assumption is stated, not hidden. Historical method brackets miracles because it has no public procedure for identifying them; that is a methodological choice, not a metaphysical denial. The conclusion is conditional: on a broadly naturalistic prior, the evidence does not make the resurrection probable. A reader with a different prior may reasonably reach a different conclusion, but the historical evidence alone does not settle the question.</p>
+      <p class="reply"><strong>Reply.</strong> The assumption is stated, not hidden, and the bracketing of miracles is itself contested. Licona argues that historians should not exclude a priori what the evidence may support; they should assess miracle claims with the same historical tools as other explanations. Hume’s argument has also been criticized on philosophical grounds: John Earman’s <em>Hume’s Abject Failure</em> argues that the argument is probabilistically confused, and Richard Swinburne defends a Bayesian account on which testimony can raise the probability of a miracle. Those criticisms have force. The essay’s claim is narrower: on a broadly naturalistic prior, the evidence does not make the resurrection probable; a theistic prior may change the result. Historical evidence alone does not settle the prior.<sup class="fn"><a href="#fn28" id="ref28">28</a></sup></p>
       </div>
       <div class="objection">
       <p class="label">Objection 3 · The early creed makes legend implausible</p>
@@ -389,19 +389,24 @@ window.DECK = {
       <div class="objection">
       <p class="label">Objection 4 · Paul’s spiritual body is still a body</p>
       <p>Wright and Licona argue that <em>sōma pneumatikon</em> is a body enlivened by the Spirit, not an immaterial spirit, so Paul is as bodily as Luke and John.</p>
-      <p class="reply"><strong>Reply.</strong> The linguistic point is largely conceded. But a transformed, imperishable body is not the same as the Gospel scenes of eating, touching, and an empty tomb; Paul’s earliest account lacks those details. The objection may show that Paul was not a docetic spiritualizer; it does not show that the later narratives are historically reliable.</p>
+      <p class="reply"><strong>Reply.</strong> The linguistic point is largely conceded. But a transformed, imperishable body is not the same as the Gospel scenes of eating, touching, and an empty tomb; Paul’s earliest account lacks those details. The silence is an argument from silence, and from letters rather than narratives: Paul is not writing a Gospel and may have no occasion to mention the tomb. That weakens the silence argument, but it does not turn silence into attestation. The earliest source simply does not give us the tomb or the tactile scenes; the later narratives do. The objection may show that Paul was not a docetic spiritualizer; it does not show that the later narratives are historically reliable.</p>
       </div>
       <div class="objection">
       <p class="label">Objection 5 · The group appearances make hallucination implausible</p>
-      <p>The appearance to more than five hundred, and the group of disciples, make a purely individual hallucination unlikely.</p>
-      <p class="reply"><strong>Reply.</strong> The five hundred are a single, unnamed report, and the group appearances are not controlled observations. The psychology of shared expectation is contested, and the essay does not rest on a confident theory of group hallucination. It rests on the thinner but sufficient claim that the earliest appearances are described in visionary language and cannot be verified as physical.</p>
+      <p>The appearances to the Twelve and to more than five hundred, and the group of disciples, make a purely individual hallucination unlikely.</p>
+      <p class="reply"><strong>Reply.</strong> The Twelve are a small, named group within the movement; their experience is reported by Paul decades later and may have been a collective visionary experience. The five hundred are a single, unnamed report, and the group appearances are not controlled observations. The psychology of shared expectation is contested, and the essay does not rest on a confident theory of group hallucination. It rests on the thinner but sufficient claim that the earliest appearances are described in visionary language and cannot be verified as physical.</p>
       </div>
       <div class="objection">
       <p class="label">Objection 6 · Wright’s argument shows the resurrection was not a natural development</p>
       <p>If the Jewish framework had no category for a dying and rising Messiah, the disciples’ claim was a radical mutation that is best explained by the event.</p>
-      <p class="reply"><strong>Reply.</strong> A mutation can be generated by scriptural interpretation, visionary experience, and the pressures of a new movement; novelty is not evidence of miracle. Wright’s argument explains why the claim was shocking and why it was not a pagan import. It does not explain why it was true. The question returns to the appearances and the tomb.</p>
+      <p class="reply"><strong>Reply.</strong> The mutation has concrete mechanisms. Scripture supplied the categories: Hosea 6:2 (“After two days he will revive us; on the third day he will raise us up”), Daniel 12:2 (the dead shall awake), and Isaiah 53 (the suffering servant) were read as a script for vindication after death. Visionary experience supplied the trigger, and the appearances were interpreted through those texts. The creed itself says “raised on the third day in accordance with the Scriptures” (1 Corinthians 15:4), which is the language of scriptural interpretation. A mutation generated this way is not evidence of miracle; it is evidence of how a text-shaped community made sense of experiences.<sup class="fn"><a href="#fn29" id="ref29">29</a></sup></p>
       </div>
-      <p class="establishes"><strong>What this establishes:</strong> the conclusion survives the strongest objections available, but only as a probabilistic judgment conditional on a stated prior. It is not a proof of unbelief.</p>
+      <div class="objection">
+      <p class="label">Objection 7 · Paul and James were converted skeptics</p>
+      <p>Paul persecuted the church (Galatians 1:13; 1 Corinthians 15:9), and James did not believe in Jesus during his ministry (John 7:5); both later became leaders. Their conversions are best explained by appearances of the risen Jesus.</p>
+      <p class="reply"><strong>Reply.</strong> The conversions are real and important, but they do not require a physical resurrection. Paul describes his encounter as a revelation “in me” (Galatians 1:15–16), not as a physical meeting; a visionary experience can transform a persecutor. James’s earlier unbelief is inferred from John 7:5, and the New Testament does not narrate the appearance to James beyond 1 Corinthians 15:7; his later leadership could have several causes. Conversion is compatible with vision, grief, community, and scriptural interpretation. The objection shows that the appearances were transformative; it does not show that they were bodily.<sup class="fn"><a href="#fn30" id="ref30">30</a></sup></p>
+      </div>
+      <p class="establishes"><strong>What this establishes:</strong> if the stated prior is accepted, the conclusion follows—the historical evidence does not make the resurrection probable. If the prior is rejected, the historical evidence alone does not settle the question.</p>
       </section>
       
       <section id="conclusion">
@@ -443,6 +448,9 @@ window.DECK = {
       <li id="fn25">On the explanatory scope and limits of the resurrection hypothesis, see Michael R. Licona, <em>The Resurrection of Jesus: A New Historiographical Approach</em> (IVP Academic, 2010); N. T. Wright, <em>The Resurrection of the Son of God</em> (Fortress, 2003). <a href="#ref25" class="back">↩</a></li>
       <li id="fn26">Mark Goodacre, <em>The Synoptic Problem: A Way Through the Maze</em> (Continuum, 2001); Ehrman, <em>How Jesus Became God</em>; Brown, <em>The Death of the Messiah</em>. <a href="#ref26" class="back">↩</a></li>
       <li id="fn27">On the explanatory-scope argument, see Licona, <em>The Resurrection of Jesus</em>; William Lane Craig, <em>The Historical Argument for the Resurrection of Jesus</em> (Edwin Mellen, 1985). <a href="#ref27" class="back">↩</a></li>
+      <li id="fn28">On the contested bracketing of miracles, see Michael R. Licona, <em>The Resurrection of Jesus</em> (IVP Academic, 2010); John Earman, <em>Hume’s Abject Failure: The Argument Against Miracles</em> (Oxford University Press, 2000), <a href="https://books.google.com/books?id=thM6A9L2QJwC">Google Books</a>; Richard Swinburne, <em>The Existence of God</em>, 2nd ed. (Clarendon Press, 2004). <a href="#ref28" class="back">↩</a></li>
+      <li id="fn29">Hosea 6:2; Daniel 12:2; Isaiah 53; 1 Corinthians 15:4, ESV: <a href="https://www.biblegateway.com/passage/?search=Hosea%206%3A2&amp;version=ESV">Hosea 6</a>; <a href="https://www.biblegateway.com/passage/?search=Daniel%2012%3A2&amp;version=ESV">Daniel 12</a>; <a href="https://www.biblegateway.com/passage/?search=Isaiah%2053&amp;version=ESV">Isaiah 53</a>. <a href="#ref29" class="back">↩</a></li>
+      <li id="fn30">Galatians 1:13, 15–16; 1 Corinthians 15:7, 9; John 7:5, ESV: <a href="https://www.biblegateway.com/passage/?search=Galatians%201&amp;version=ESV">Galatians 1</a>; <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015&amp;version=ESV">1 Corinthians 15</a>; <a href="https://www.biblegateway.com/passage/?search=John%207&amp;version=ESV">John 7</a>. <a href="#ref30" class="back">↩</a></li>
       </ol>
       </section>
       
@@ -458,6 +466,7 @@ window.DECK = {
       <li><a href="https://www.biblegateway.com/passage/?search=Luke%2024&amp;version=ESV">Luke 24</a> (ESV).</li>
       <li><a href="https://www.biblegateway.com/passage/?search=John%2020&amp;version=ESV">John 20</a> (ESV).</li>
       <li><a href="https://www.biblegateway.com/passage/?search=Acts%209&amp;version=ESV">Acts 9</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2022&amp;version=ESV">22</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2026&amp;version=ESV">26</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2012&amp;version=ESV">12</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Hosea%206%3A2&amp;version=ESV">Hosea 6:2</a>; <a href="https://www.biblegateway.com/passage/?search=Daniel%2012%3A2&amp;version=ESV">Daniel 12:2</a>; <a href="https://www.biblegateway.com/passage/?search=Isaiah%2053&amp;version=ESV">Isaiah 53</a> (ESV).</li>
       <li><a href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D15%3Achapter%3D44">Tacitus, <em>Annals</em> 15.44</a> (Perseus).</li>
       <li><a href="https://www.perseus.tufts.edu/hopper/text?doc=J.+AJ+18.63&amp;_pc=1">Josephus, <em>Antiquities</em> 18.63</a> (Perseus; partly interpolated).</li>
       <li><a href="https://www.earlychristianwritings.com/text/1clement-roberts.html">1 Clement 5</a> (early Christian writings).</li>
@@ -472,6 +481,8 @@ window.DECK = {
       <li>Mark Goodacre, <em>The Synoptic Problem: A Way Through the Maze</em> (Continuum, 2001).</li>
       <li>Gary R. Habermas and Michael R. Licona, <em>The Case for the Resurrection of Jesus</em> (Kregel, 2004).</li>
       <li>David Hume, <em>An Enquiry Concerning Human Understanding</em> (1748), §10.</li>
+      <li>John Earman, <em>Hume’s Abject Failure: The Argument Against Miracles</em> (Oxford University Press, 2000).</li>
+      <li>Richard Swinburne, <em>The Existence of God</em>, 2nd ed. (Clarendon Press, 2004).</li>
       <li>Martin Hengel, <em>Crucifixion in the Ancient World</em> (Fortress, 1977).</li>
       <li>Michael R. Licona, <em>The Resurrection of Jesus: A New Historiographical Approach</em> (IVP Academic, 2010).</li>
       <li>Gerd Lüdemann, <em>The Resurrection of Jesus: History, Experience, Theology</em> (Fortress, 1994).</li>

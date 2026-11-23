@@ -61,3 +61,17 @@ The revised case file was re-checked after the second round of edits.
 - **Quotations.** All six blockquotes were re-verified against the ESV text. The inline phrases listed above were re-checked. No unconfirmed quotation marks remain.
 
 If a future edit adds a quotation from a modern scholar, it must be checked against a named edition and page before it is published; otherwise it should be paraphrased, as the modern-scholarship sections here are.
+
+## Objections revision (23 November 2026)
+
+- **First-person self-grading removed.** The introduction no longer says the replies “seem to me” adequate, and the closing line no longer says the conclusion “survives.” It now states the conditional: if the stated prior is accepted, the historical evidence does not make the resurrection probable; if the prior is rejected, the historical evidence alone does not settle the question.
+- **Objection 1** now discusses explanatory scope, power, plausibility, and ad hocness, and concedes that on a theistic prior the resurrection hypothesis scores well.
+- **Objection 2** notes that bracketing miracles is contested (Licona) and cites John Earman, *Hume’s Abject Failure: The Argument Against Miracles* (Oxford University Press, 2000), checked at <https://books.google.com/books?id=thM6A9L2QJwC>, and Richard Swinburne, *The Existence of God*, 2nd ed. (Clarendon Press, 2004).
+- **Objection 4** now acknowledges that Paul’s silence is an argument from silence, and from letters rather than narratives.
+- **Objection 5** addresses the Twelve as well as the five hundred.
+- **Objection 6** gives concrete mechanisms: Hosea 6:2, Daniel 12:2, Isaiah 53, and visionary experience. The Hosea and Daniel texts were checked against the ESV at Bible Gateway; the Hosea 6:2 quotation is exact. The Daniel and Isaiah references are paraphrased.
+- **Objection 7** adds Paul and James as converted skeptics, citing Galatians 1:13 and 15–16, 1 Corinthians 15:7 and 9, and John 7:5; the reply notes that the James material is an inference.
+- **Duplicate heading check.** The page contains one “The prior-probability assumption” label and one “Strongest objections to this essay’s conclusion” heading. The duplication in the previous chat message was in the pasted formatting, not the page.
+- **No new direct quotations** from modern scholars were introduced. Earman, Swinburne, Wright and Licona are paraphrased or cited by title; the only new biblical quotation (Hosea 6:2) was checked against the ESV.
+
+Footnotes are now 30 in total, renumbered in order of appearance; every reference/backlink pair was checked.
