@@ -1,12 +1,15 @@
 {
   "name": "christianity-problems",
-  "version": "1.0.0",
-  "description": "An evidence deck of Christianity's problems.",
-  "main": "build.js",
+  "version": "2.0.0",
+  "private": true,
+  "description": "An evidence deck of Christianity’s problems.",
   "scripts": {
     "build": "node build.js",
-    "start": "npx serve dist"
+    "serve": "node serve.js",
+    "start": "node serve.js",
+    "translations": "node scripts/i18n.js",
+    "validate": "node scripts/validate-translations.js",
+    "test": "npm run validate && npm run build"
   },
-  "author": "",
   "license": "MIT"
 }

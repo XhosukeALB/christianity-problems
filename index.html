@@ -3,7 +3,22 @@
 <head>
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-<title>Christianity’s Problems: Evidence Deck</title>
+<title>Christianity’s Problems — Evidence Deck</title>
+<meta name="description" content="An evidence deck of Christianity’s problems: philosophy, history, textual criticism, theology, prophecy, ethics, and the history of science — organized, argued, and sourced." />
+<meta name="color-scheme" content="light dark" />
+<meta name="theme-color" content="#fbfaf6" />
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Christianity’s Problems" />
+<meta property="og:title" content="Christianity’s Problems — Evidence Deck" />
+<meta property="og:description" content="An evidence deck of Christianity’s problems, organized and sourced." />
+<meta property="og:url" content="https://christianity-problems.pages.dev/" />
+<meta property="og:image" content="https://christianity-problems.pages.dev/assets/og.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:image" content="https://christianity-problems.pages.dev/assets/og.png" />
+<link rel="canonical" href="https://christianity-problems.pages.dev/" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%2315100a'/%3E%3Cpath d='M16 20h32M16 32h32M16 44h20' stroke='%23d6ad63' stroke-width='4' stroke-linecap='round'/%3E%3C/svg%3E" />
 
 <script>
   (function () {
@@ -17,12 +32,13 @@
 
 <style>
 [hidden] { display: none !important; }
+.sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
 :root {
   --top-h: 52px; --bottom-h: 60px; --max-w: 1040px; --max-prose: 68ch;
   --r-md: 12px; --r-lg: 16px; --r-pill: 999px;
   --ease: cubic-bezier(0.16, 1, 0.3, 1);
-  --serif: "Cardo", "Iowan Old Style", "Charter", Georgia, serif;
+  --serif: "Cardo", "Iowan Old Style", "Charter", Georgia, "Noto Serif", serif;
   --display: "Prata", "Iowan Old Style", Georgia, serif;
   --display-card: "Fraunces", "Iowan Old Style", Georgia, serif;
   --sans: "Inter", system-ui, -apple-system, "Segoe UI", Arial, sans-serif;
@@ -54,12 +70,13 @@
 *,::before,::after { box-sizing: border-box; }
 html { font-size: 15.5px; background: var(--bg); }
 body { margin: 0; height: 100dvh; overflow: hidden; font-family: var(--serif); color: var(--ink); background: var(--bg); line-height: 1.42; -webkit-font-smoothing: antialiased; }
-.deck-app { height: 100dvh; display: grid; grid-template-rows: calc(var(--top-h) + env(safe-area-inset-top,0px)) minmax(0,1fr) minmax(var(--bottom-h),auto); }
+.deck-app { height: 100dvh; display: grid; grid-template-columns: minmax(0, 1fr); grid-template-rows: calc(var(--top-h) + env(safe-area-inset-top,0px)) minmax(0,1fr) minmax(var(--bottom-h),auto); overflow-x: hidden; }
+
 .deck-top { display: flex; align-items: center; justify-content: space-between; gap: 1rem; height: calc(var(--top-h) + env(safe-area-inset-top,0px)); padding: env(safe-area-inset-top,0px) max(1rem, env(safe-area-inset-left,0px)) 1px; background: var(--glass); backdrop-filter: blur(15px); z-index: 50; position: relative; }
 .deck-top::after { content:""; position:absolute; left:0; right:0; bottom:0; height:1px; background: rgb(var(--gold-rgb)/.28); }
-.deck-brand { display:inline-flex; align-items:baseline; gap:.8rem; border:0; background:transparent; cursor:pointer; text-align:left; }
-.deck-brand-name { font:700 1.08rem/1 var(--serif); letter-spacing:-.02em; color:var(--ink-strong); }
-.deck-actions { display:inline-flex; align-items:center; gap:.45rem; }
+.deck-brand { display:inline-flex; align-items:baseline; gap:.8rem; border:0; background:transparent; cursor:pointer; text-align:start; min-width:0; }
+.deck-brand-name { font:700 1.08rem/1 var(--serif); letter-spacing:-.02em; color:var(--ink-strong); overflow:hidden; text-overflow:ellipsis; white-space:nowrap; max-width:62vw; }
+.deck-actions { display:inline-flex; align-items:center; gap:.45rem; flex:0 0 auto; }
 .deck-icon { width:2.35rem; height:2.35rem; display:grid; place-items:center; border:1px solid transparent; border-radius:50%; background:transparent; color:var(--gold-2); cursor:pointer; position:relative; }
 .deck-icon svg { width:1.15rem; height:1.15rem; fill:none; stroke:currentColor; stroke-width:1.7; stroke-linecap:round; stroke-linejoin:round; }
 .deck-icon:hover { color:var(--ink-strong); background: rgb(var(--gold-rgb)/.12); }
@@ -67,63 +84,75 @@ body { margin: 0; height: 100dvh; overflow: hidden; font-family: var(--serif); c
 .deck-theme .icon-sun { display:none; }
 :root[data-theme="dark"] .deck-theme .icon-moon { display:none; }
 :root[data-theme="dark"] .deck-theme .icon-sun { display:block; }
-.lang-badge { position:absolute; right:-.3rem; bottom:-.25rem; padding:.14rem .3rem .12rem; border:1px solid var(--gold); border-radius:99px; background:var(--popover-bg); color:var(--gold-2); font:800 .5rem/1 var(--sans); letter-spacing:.08em; pointer-events:none; }
+.lang-badge { position:absolute; inset-inline-end:-.3rem; bottom:-.25rem; padding:.14rem .3rem .12rem; border:1px solid var(--gold); border-radius:99px; background:var(--popover-bg); color:var(--gold-2); font:800 .5rem/1 var(--sans); letter-spacing:.08em; pointer-events:none; }
 .deck-progress { position:absolute; left:0; bottom:0; height:1px; width:100%; transform:scaleX(0); transform-origin:left; background:var(--gold); opacity:.92; transition: transform .4s var(--ease); }
+html[dir="rtl"] .deck-progress { transform-origin:right; }
 
-.deck-stage { position:relative; overflow:hidden; touch-action:pan-y pinch-zoom; }
+.deck-stage { position:relative; overflow:hidden; touch-action:pan-y pinch-zoom; direction:ltr; }
+.deck-stage:focus { outline:none; }
+.deck-stage:focus-visible { outline:2px solid var(--focus); outline-offset:-2px; }
 .deck-track { display:flex; height:100%; width:100%; position:relative; will-change:transform; transition: transform .5s var(--ease); }
-.slide { flex:0 0 100%; height:100%; overflow:hidden auto; overscroll-behavior:none; padding: calc(var(--top-h) + 1.5rem) max(.9rem, env(safe-area-inset-left,0px)) 2rem; background: var(--panel); scrollbar-width:none; }
-.slide::-webkit-scrollbar { display:none; }
+.slide { flex:0 0 100%; height:100%; overflow:hidden auto; overscroll-behavior:contain; padding: calc(var(--top-h) + 1.5rem) max(.9rem, env(safe-area-inset-left,0px)) 2.2rem; background: var(--panel); scrollbar-width:thin; scrollbar-color: var(--hairline) transparent; }
 .slide[aria-hidden="true"] { visibility: hidden; }
+.slide::-webkit-scrollbar { width:8px; }
+.slide::-webkit-scrollbar-thumb { background: var(--hairline); border-radius:8px; }
 
 .card-inner { max-width: var(--max-w); margin: 0 auto; }
-.card-kicker { font:800 .68rem/1 var(--sans); letter-spacing:.36em; text-transform:uppercase; color:var(--gold-2); margin-bottom:1rem; }
-.card-title { font:400 clamp(1.8rem,4.4vw,3.4rem)/.98 var(--display-card); letter-spacing:-.045em; color:var(--ink-strong); margin:0 0 1.2rem; text-wrap:balance; }
-.card-claim { font:500 1.02rem/1.55 var(--sans); color:var(--ink-soft); border-left:2px solid var(--gold-edge); padding-left:1rem; margin:0 0 1.8rem; max-width: var(--max-prose); }
+.card-kicker { font:800 .68rem/1.2 var(--sans); letter-spacing:.36em; text-transform:uppercase; color:var(--gold-2); margin-bottom:1rem; }
+.card-title { font:400 clamp(1.8rem,4.4vw,3.4rem)/1.02 var(--display-card); letter-spacing:-.045em; color:var(--ink-strong); margin:0 0 1.2rem; text-wrap:balance; }
+.card-claim { font:500 1.02rem/1.55 var(--sans); color:var(--ink-soft); border-inline-start:2px solid var(--gold-edge); padding-inline-start:1rem; margin:0 0 1.8rem; max-width: var(--max-prose); }
 
-/* --- Evidence Deck Dossier Styles --- */
 .card-body details.deck-details { margin-bottom: 1.2rem; border: 1px solid var(--gold-edge); border-radius: var(--r-md); background: rgb(var(--gold-rgb) / 0.02); overflow: hidden; transition: background 0.2s; }
 .card-body details.deck-details[open] { background: rgb(var(--gold-rgb) / 0.06); }
 .card-body summary.deck-summary { padding: 1rem 1.2rem; font: 700 0.95rem/1.3 var(--sans); color: var(--gold-2); cursor: pointer; display: flex; align-items: center; list-style: none; }
 .card-body summary.deck-summary::-webkit-details-marker { display: none; }
 .card-body summary.deck-summary:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.card-body summary.deck-summary::after { content: ""; width: 1.2em; height: 1.2em; margin-left: auto; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d6ad63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; transition: transform 0.3s ease; }
+.card-body summary.deck-summary::after { content: ""; width: 1.2em; height: 1.2em; margin-inline-start: auto; background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23d6ad63' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpath d='M6 9l6 6 6-6'/%3E%3C/svg%3E"); background-size: contain; background-repeat: no-repeat; transition: transform 0.3s ease; flex:0 0 auto; }
 .card-body details.deck-details[open] summary.deck-summary::after { transform: rotate(180deg); }
 .card-body .details-content { padding: 1.2rem; border-top: 1px solid var(--hairline); font-family: var(--serif); }
 
-/* Unscoped source link so it works in .sources */
-.source-link { display: inline-flex; padding: 0.15em 0.6em; margin-left: 0.3rem; border: 1px solid var(--gold-edge); border-radius: var(--r-pill); background: rgb(var(--gold-rgb) / 0.08); color: var(--gold-2); font: 700 0.7rem/1.2 var(--sans); text-decoration: none; white-space: nowrap; }
+.source-link { display: inline-flex; max-width: 100%; padding: 0.15em 0.6em; margin-inline-start: 0.3rem; border: 1px solid var(--gold-edge); border-radius: var(--r-pill); background: rgb(var(--gold-rgb) / 0.08); color: var(--gold-2); font: 700 0.7rem/1.35 var(--sans); text-decoration: none; white-space: normal; overflow-wrap: anywhere; }
 .source-link:hover { background: rgb(var(--gold-rgb) / 0.15); color: var(--ink); }
 .source-link:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 
-.card-body blockquote { margin: 1.2rem 0; padding: 1rem 1.2rem; border-left: 3px solid var(--gold); background: var(--callout-bg); color: var(--ink-strong); font-style: italic; }
-.card-body blockquote cite { display: block; margin-top: 0.8rem; font: 700 0.75rem/1.2 var(--sans); color: var(--gold-2); text-transform: uppercase; letter-spacing: 0.05em; font-style: normal; }
-.card-body p { margin: 0 0 1rem; max-width: var(--max-prose); }
-.card-body ul, .card-body ol { max-width: var(--max-prose); padding-left: 1.2rem; margin-bottom: 1rem; }
+.card-body blockquote { margin: 1.2rem 0; padding: 1rem 1.2rem; border-inline-start: 3px solid var(--gold); background: var(--callout-bg); color: var(--ink-strong); font-style: italic; }
+.card-body blockquote cite { display: block; margin-top: 0.8rem; font: 700 0.75rem/1.35 var(--sans); color: var(--gold-2); text-transform: uppercase; letter-spacing: 0.05em; font-style: normal; }
+.card-body p { margin: 0 0 1rem; max-width: var(--max-prose); line-height:1.62; }
+.card-body ul, .card-body ol { max-width: var(--max-prose); padding-inline-start: 1.2rem; margin-bottom: 1rem; }
 .card-body li { margin-bottom: 0.4rem; }
+.card-body em { font-style: italic; }
+.card-body strong { font-weight: 700; color: var(--ink-strong); }
 
-/* Sources block */
+.table-wrap { margin: 1.2rem 0; border: 1px solid var(--hairline); border-radius: var(--r-md); overflow-x: auto; -webkit-overflow-scrolling: touch; }
+table.compare { border-collapse: collapse; width: 100%; min-width: 760px; font: 0.9rem/1.5 var(--sans); color: var(--ink-soft); }
+table.compare th, table.compare td { padding: 0.65rem 0.8rem; text-align: start; vertical-align: top; border-bottom: 1px solid var(--hairline); border-inline-end: 1px solid var(--hairline); }
+table.compare thead th { font: 800 0.7rem/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--gold-2); background: rgb(var(--gold-rgb) / 0.07); }
+table.compare tbody th { font-weight: 700; color: var(--ink-strong); position: sticky; inset-inline-start: 0; background: var(--panel); z-index: 1; }
+table.compare tr:last-child th, table.compare tr:last-child td { border-bottom: 0; }
+table.compare th:last-child, table.compare td:last-child { border-inline-end: 0; }
+
 .sources { margin-top: 2rem; padding-top: 1.2rem; border-top: 1px solid var(--hairline); }
 .sources h3 { font: 700 1rem/1.2 var(--sans); text-transform: uppercase; letter-spacing: 0.2em; color: var(--gold-2); margin: 0 0 0.8rem; }
-.sources ol { max-width: var(--max-prose); padding-left: 1.2rem; font: 0.94rem/1.5 var(--sans); color: var(--muted); }
+.sources ol { max-width: var(--max-prose); padding-inline-start: 1.2rem; font: 0.94rem/1.5 var(--sans); color: var(--muted); }
 .sources li { margin: 0.35rem 0; }
 
-/* Nested Accordions */
 .card-body details.nested-supplement { margin-bottom: 0.8rem; border: 1px solid var(--hairline); border-radius: var(--r-md); background: rgb(var(--gold-rgb) / 0.02); }
-.card-body details.nested-supplement > summary { padding: 0.8rem 1rem; font: 700 0.85rem/1.3 var(--sans); color: var(--ink-soft); cursor: pointer; list-style: none; display: flex; align-items: center; }
+.card-body details.nested-supplement > summary { padding: 0.8rem 1rem; font: 700 0.85rem/1.3 var(--sans); color: var(--ink-soft); cursor: pointer; list-style: none; display: flex; align-items: center; gap:.5rem; }
 .card-body details.nested-supplement > summary:focus-visible { outline: 2px solid var(--focus); outline-offset: -2px; }
-.card-body details.nested-supplement > summary::after { content: "+"; margin-left: auto; color: var(--gold-2); font-size: 1.2rem; font-weight: 400; }
+.card-body details.nested-supplement > summary::after { content: "+"; margin-inline-start: auto; color: var(--gold-2); font-size: 1.2rem; font-weight: 400; }
 .card-body details.nested-supplement[open] > summary::after { content: "−"; }
 .card-body details.nested-supplement > .nested-body { padding: 1rem; border-top: 1px solid var(--hairline); font-size: 0.95rem; }
 
 .cover { min-height:100%; display:flex; flex-direction:column; justify-content:center; max-width: var(--max-w); margin:0 auto; padding:5vh 0 2rem; }
-.cover-kicker { font:800 .78rem/1 var(--sans); letter-spacing:.42em; text-transform:uppercase; color:var(--gold-2); margin-bottom:1.2rem; }
-.cover h1 { font:400 clamp(2.8rem,7vw,5.8rem)/.92 var(--display); letter-spacing:-.05em; max-width:18ch; color:var(--ink-strong); margin:0; text-wrap:balance; }
+.cover-kicker { font:800 .78rem/1.2 var(--sans); letter-spacing:.42em; text-transform:uppercase; color:var(--gold-2); margin-bottom:1.2rem; }
+.cover h1 { font:400 clamp(2.8rem,7vw,5.8rem)/.95 var(--display); letter-spacing:-.05em; max-width:18ch; color:var(--ink-strong); margin:0; text-wrap:balance; }
 .cover-rule { width:6.4rem; height:2px; background:linear-gradient(90deg, var(--gold) 0%, var(--gold-2) 50%, transparent 100%); margin:1.4rem 0 .8rem; border-radius:1px; }
-.cover-sub { max-width:46ch; color:var(--muted); font-family:var(--sans); font-size:.94rem; line-height:1.55; border-left:2px solid var(--gold-edge); padding-left:1.1rem; margin:0; }
-.cover-hint { list-style:none; margin:1.2rem 0 0; padding:0 0 0 1.1rem; max-width:46ch; display:grid; gap:.45rem; border-left:2px solid var(--gold-edge); color:var(--muted); font:500 .94rem/1.55 var(--sans); }
+.cover-sub { max-width:46ch; color:var(--muted); font-family:var(--sans); font-size:.94rem; line-height:1.6; border-inline-start:2px solid var(--gold-edge); padding-inline-start:1.1rem; margin:0; }
+.cover-method { max-width:52ch; margin:1.1rem 0 0; border-inline-start:2px solid var(--gold-edge); padding-inline-start:1.1rem; color:var(--ink-soft); font:500 .9rem/1.6 var(--sans); }
+.cover-hint { list-style:none; margin:1.2rem 0 0; padding:0 0 0 1.1rem; max-width:46ch; display:grid; gap:.45rem; border-inline-start:2px solid var(--gold-edge); color:var(--muted); font:500 .94rem/1.55 var(--sans); }
+.mobile-hint { display:none; }
 .keycap { display:inline-grid; place-items:center; min-width:1.7em; height:1.7em; padding:0 .38em; border:1px solid var(--line-strong); border-radius:.4em; background: linear-gradient(180deg, rgb(var(--gold-rgb)/.04) 0%, transparent 100%); color: var(--gold-2); font:700 .8em/1 var(--sans); vertical-align:middle; }
-.mobile-hint { display: none; }
+.notice { margin-top:1.4rem; max-width:52ch; padding:.55rem .75rem; border:1px dashed var(--gold-edge); border-radius:8px; color:var(--muted); font:500 .8rem/1.5 var(--sans); }
 
 .deck-bottom { display:flex; align-items:stretch; gap:.55rem; height: calc(var(--bottom-h) + env(safe-area-inset-bottom,0px)); padding: .55rem max(.7rem, env(safe-area-inset-left,0px)) calc(.55rem + env(safe-area-inset-bottom,0px)); background: var(--bg); z-index:50; position:relative; }
 .deck-bottom::before { content:""; position:absolute; left:0; right:0; top:0; height:1px; background: rgb(var(--gold-rgb)/.28); }
@@ -132,18 +161,25 @@ body { margin: 0; height: 100dvh; overflow: hidden; font-family: var(--serif); c
 .deck-nav:hover:not(:disabled) { color:var(--ink-strong); background: rgb(var(--gold-rgb)/.1); }
 .deck-nav:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
 .deck-nav:disabled { opacity:.26; cursor:default; }
-.deck-here { flex:1 1 auto; min-width:0; display:flex; align-items:center; gap:.6rem; padding:0 .95rem; border:1px solid var(--line-strong); border-radius:14px; background:transparent; color:var(--ink); cursor:pointer; text-align:left; }
+html[dir="rtl"] .deck-nav svg { transform: scaleX(-1); }
+.deck-here { flex:1 1 auto; min-width:0; display:flex; align-items:center; gap:.6rem; padding:0 .95rem; border:1px solid var(--line-strong); border-radius:14px; background:transparent; color:var(--ink); cursor:pointer; text-align:start; }
 .deck-here:hover { border-color: var(--gold); background: rgb(var(--gold-rgb)/.06); }
 .deck-here:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
-.deck-here-tag { font:700 .58rem/1 var(--sans); color: var(--gold-2); text-transform:uppercase; }
+.deck-here-tag { font:700 .58rem/1.2 var(--sans); color: var(--gold-2); text-transform:uppercase; white-space:nowrap; }
 .deck-here-title { flex:1 1 auto; min-width:0; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; font:700 1.02rem/1.2 var(--serif); color: var(--ink-strong); }
+.deck-here .keycap { flex:0 0 auto; }
 
-.pop { position:fixed; top: calc(var(--top-h) + env(safe-area-inset-top,0px) + .5rem); right:1rem; width:min(24rem, calc(100vw - 2rem)); background: var(--popover-bg); border:1px solid var(--hairline); border-radius: var(--r-lg); box-shadow: var(--shadow); padding:1rem; z-index:80; }
-.pop-eyebrow { font:800 .6rem/1 var(--sans); letter-spacing:.3em; text-transform:uppercase; color: var(--gold-2); margin-bottom:.7rem; }
+.pop { position:fixed; top: calc(var(--top-h) + env(safe-area-inset-top,0px) + .5rem); inset-inline-end:1rem; width:min(24rem, calc(100vw - 2rem)); background: var(--popover-bg); border:1px solid var(--hairline); border-radius: var(--r-lg); box-shadow: var(--shadow); padding:1rem; z-index:80; }
+.pop-eyebrow { font:800 .6rem/1.2 var(--sans); letter-spacing:.3em; text-transform:uppercase; color: var(--gold-2); margin-bottom:.7rem; }
+.pop input { width:100%; padding:.55rem .7rem; margin-bottom:.6rem; border:1px solid var(--line-strong); border-radius:8px; background:var(--panel); color:var(--ink); font:.85rem/1.2 var(--sans); outline:none; }
+.pop input:focus { border-color: var(--gold); }
 .lang-list { max-height:18rem; overflow:auto; display:grid; gap:.15rem; }
-.lang-item { display:flex; justify-content:space-between; align-items:center; padding:.4rem .5rem; border:0; border-radius:6px; background:transparent; color: var(--ink-soft); font:.9rem/1.2 var(--sans); cursor:pointer; text-align:left; }
+.lang-item { display:flex; justify-content:space-between; align-items:center; gap:.7rem; padding:.45rem .5rem; border:0; border-radius:6px; background:transparent; color: var(--ink-soft); font:.9rem/1.3 var(--sans); cursor:pointer; text-align:start; }
 .lang-item:hover, .lang-item[aria-selected="true"] { background: rgb(var(--gold-rgb)/.1); color: var(--ink-strong); }
-.lang-item small { color: var(--muted); font-size:.75rem; }
+.lang-item[aria-selected="true"] { box-shadow: inset 2px 0 0 var(--gold); }
+html[dir="rtl"] .lang-item[aria-selected="true"] { box-shadow: inset -2px 0 0 var(--gold); }
+.lang-item small { color: var(--muted); font-size:.75rem; white-space:nowrap; }
+.lang-note { margin:.7rem 0 0; color:var(--muted); font:500 .72rem/1.5 var(--sans); }
 
 .overlay { position:fixed; inset:0; background:rgba(0,0,0,.45); z-index:100; padding:1rem; display:grid; place-items:start center; }
 .overlay.center { place-items:center; }
@@ -151,344 +187,805 @@ body { margin: 0; height: 100dvh; overflow: hidden; font-family: var(--serif); c
 .search-panel input { width:100%; padding:.8rem 1rem; border:1px solid var(--line-strong); border-radius: var(--r-md); background: var(--panel); color: var(--ink); font:1rem/1.2 var(--sans); outline:none; }
 .search-panel input:focus { border-color: var(--gold); }
 .search-results { margin-top:.8rem; max-height:50vh; overflow:auto; display:grid; gap:.3rem; }
-.search-result { display:block; padding:.6rem .7rem; border-radius:8px; color: var(--ink); background:transparent; border:0; text-align:left; cursor:pointer; font:.94rem/1.3 var(--sans); }
-.search-result:hover { background: rgb(var(--gold-rgb)/.1); }
+.search-result { display:block; padding:.6rem .7rem; border-radius:8px; color: var(--ink); background:transparent; border:0; text-align:start; cursor:pointer; font:.94rem/1.35 var(--sans); }
+.search-result:hover, .search-result[aria-selected="true"] { background: rgb(var(--gold-rgb)/.1); }
 .search-result b { display:block; font-weight:700; color: var(--ink-strong); margin-bottom:.2rem; }
 .search-result span { color: var(--muted); font-size:.85rem; }
+.search-result mark { background: rgb(var(--gold-rgb)/.22); color: var(--ink-strong); border-radius:3px; padding:0 .1em; }
+.search-empty { padding:1rem; color:var(--muted); font-family:var(--sans); font-size:.9rem; }
 .index-panel { width:min(40rem,100%); max-height:80vh; background: var(--popover-bg); border:1px solid var(--hairline); border-radius: var(--r-lg); box-shadow: var(--shadow); display:flex; flex-direction:column; overflow:hidden; }
-.index-bar { display:flex; align-items:center; justify-content:space-between; padding:.9rem 1rem; border-bottom:1px solid var(--hairline); }
+.index-bar { display:flex; align-items:center; justify-content:space-between; gap:1rem; padding:.9rem 1rem; border-bottom:1px solid var(--hairline); }
 .index-title { font:700 1.1rem/1 var(--serif); color: var(--ink-strong); }
 .index-hint { font:.75rem/1.2 var(--sans); color: var(--muted); }
 .index-list { overflow:auto; padding:.5rem; display:grid; gap:.2rem; }
-.ix-item { display:flex; align-items:baseline; gap:.8rem; padding:.6rem .7rem; border:0; border-radius:8px; background:transparent; text-align:left; cursor:pointer; color: var(--ink-soft); font:.95rem/1.3 var(--sans); }
-.ix-item:hover { background: rgb(var(--gold-rgb)/.1); color: var(--ink-strong); }
+.ix-item { display:flex; align-items:baseline; gap:.8rem; padding:.6rem .7rem; border:0; border-radius:8px; background:transparent; text-align:start; cursor:pointer; color: var(--ink-soft); font:.95rem/1.35 var(--sans); }
+.ix-item:hover, .ix-item[aria-current="true"] { background: rgb(var(--gold-rgb)/.1); color: var(--ink-strong); }
 .ix-num { font:700 .72rem/1 var(--sans); color: var(--gold-2); min-width:1.4rem; }
-.close-x { position:absolute; top:.6rem; right:.6rem; border:0; background:transparent; color: var(--muted); font-size:1.1rem; cursor:pointer; }
+.close-x { position:absolute; top:.6rem; inset-inline-end:.6rem; border:0; background:transparent; color: var(--muted); font-size:1.1rem; cursor:pointer; padding:.3rem .5rem; }
 .close-x:hover { color: var(--ink-strong); }
+.close-x:focus-visible { outline:2px solid var(--focus); outline-offset:2px; border-radius:6px; }
+
+.toast { position:fixed; left:50%; bottom: calc(var(--bottom-h) + 1rem + env(safe-area-inset-bottom,0px)); transform:translateX(-50%); max-width:min(32rem, calc(100vw - 2rem)); padding:.65rem 1rem; border-radius:8px; background:var(--ink-strong); color:var(--bg); font:.85rem/1.4 var(--sans); box-shadow:var(--shadow); z-index:200; text-align:center; }
+.boot { position:fixed; inset:0; display:grid; place-items:center; gap:1rem; background:var(--bg); z-index:300; }
+.boot-inner { display:grid; justify-items:center; gap:1rem; }
+.boot-mark { width:2.6rem; height:2.6rem; border-radius:50%; border:2px solid var(--hairline); border-top-color:var(--gold); animation:spin 0.9s linear infinite; }
+.boot-text { font:600 .8rem/1 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--muted); }
+@keyframes spin { to { transform: rotate(360deg); } }
 
 @media (max-width:900px) {
-  .deck-here-title { display:none; }
-  .deck-here { justify-content:center; }
+  .deck-here-title { display:block; font-size:.92rem; }
+  .deck-here { justify-content:flex-start; }
   .card-title { font-size:clamp(1.8rem,8vw,2.8rem); }
-  .desktop-hint { display: none; }
-  .mobile-hint { display: list-item; }
+  .slide { padding-top: calc(var(--top-h) + .8rem); }
+  .desktop-hint { display:none; }
+  .mobile-hint { display:list-item; }
+}
+@media (max-width:520px) {
+  .deck-here .keycap { display:none; }
+  .deck-here-tag { font-size:.62rem; }
+  .card-title { letter-spacing:-.03em; }
+  table.compare { min-width: 640px; font-size: .82rem; }
+  table.compare th, table.compare td { padding: .5rem .6rem; }
+  .card-body .details-content { padding: .9rem; }
 }
 @media (prefers-reduced-motion: reduce) {
-  .deck-track, .deck-progress, details.deck-details, details.deck-details > summary::after { transition: none !important; }
+  .deck-track, .deck-progress, details.deck-details, details.deck-details > summary::after, .boot-mark { transition: none !important; animation: none !important; }
+  * { scroll-behavior:auto !important; }
 }
 @media print {
-  .deck-top, .deck-bottom, .pop, .overlay, .deck-progress { display:none !important; }
+  .deck-top, .deck-bottom, .pop, .overlay, .deck-progress, .toast, .boot { display:none !important; }
   body { overflow:visible; height:auto; background:#fff; color:#111; }
   .deck-app { display:block; height:auto; }
   .deck-stage { display:block; overflow:visible; height:auto; }
   .deck-track { display:block; transform:none !important; }
   .slide { break-after:page; height:auto; overflow:visible; padding:0 0 2rem; background:#fff; color:#111; display:block !important; visibility:visible !important; }
-  .slide[aria-hidden="true"] { display:block !important; }
-  details.deck-details, details.nested-supplement { border: 1px solid #ccc; }
-  details.deck-details[open] > summary::after, details.nested-supplement[open] > summary::after { display:none; }
-  /* Force all details open when printing */
-  details > div { display:block !important; }
+  .slide[aria-hidden="true"] { display:block !important; visibility:visible !important; }
+  .slide .card-inner { max-width:none; }
+  details.deck-details, details.nested-supplement { border:1px solid #bbb; break-inside:avoid; }
+  details > .details-content, details > .nested-body { display:block !important; }
+  .card-body details.deck-details { background:#fff; }
+  .sources a, .source-link { color:#111; border-color:#bbb; }
+  a[href^="http"]::after { content:" (" attr(href) ")"; font-size:.72em; color:#555; word-break:break-all; }
 }
+
+/* Script-specific typography. Webfonts are loaded on demand by app.js. */
+html[lang="ar"] { --serif: "Noto Naskh Arabic", "Geeza Pro", "Segoe UI", Tahoma, serif; --display: "Noto Naskh Arabic", "Geeza Pro", serif; --display-card: "Noto Naskh Arabic", "Geeza Pro", serif; --sans: "Noto Naskh Arabic", system-ui, Tahoma, sans-serif; }
+html[dir="rtl"] .card-kicker, html[dir="rtl"] .cover-kicker, html[dir="rtl"] .pop-eyebrow, html[dir="rtl"] .sources h3, html[dir="rtl"] .deck-here-tag, html[dir="rtl"] .index-hint { letter-spacing: 0; text-transform: none; }
+html[dir="rtl"] .source-link { margin-inline-start: .3rem; }
+html[lang="ar"] body { line-height: 1.9; }
+html[lang="ar"] .card-title, html[lang="ar"] .cover h1 { line-height: 1.45; letter-spacing:0; }
+html[lang="ar"] .card-body p { line-height: 2; }
+html[lang="ur"] { --serif: "Noto Naskh Arabic", "Jameel Noori Nastaleeq", "Segoe UI", serif; --display: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; --display-card: "Noto Nastaliq Urdu", "Jameel Noori Nastaleeq", serif; --sans: "Noto Naskh Arabic", "Segoe UI", Tahoma, sans-serif; }
+html[lang="ur"] body { line-height: 2; }
+html[lang="ur"] .card-title, html[lang="ur"] .cover h1 { line-height: 1.9; letter-spacing:0; }
+html[lang="ur"] .card-body p { line-height: 2.1; }
+html[dir="rtl"] .cover-rule { background:linear-gradient(270deg, var(--gold) 0%, var(--gold-2) 50%, transparent 100%); }
 </style>
+<noscript>
+<style>
+  .deck-app { display: block; height: auto; overflow: visible; }
+  .deck-top, .deck-bottom, .deck-progress { display: none !important; }
+  .deck-stage { display: block; overflow: visible; height: auto; }
+  .deck-track { display: block; transform: none !important; }
+  .slide { display: block !important; visibility: visible !important; height: auto; overflow: visible; padding: 2rem 1rem 2.5rem; }
+  .cover { min-height: 0; padding: 3rem 0 1rem; }
+  .boot { display: none !important; }
+</style>
+</noscript>
 </head>
 <body>
-<div class="deck-app">
+<div class="deck-app" id="appRoot">
   <header class="deck-top">
     <button class="deck-brand" id="brand" type="button">
-      <span class="deck-brand-name">Christianity’s Problems</span>
+      <span class="deck-brand-name" id="brandName">Christianity’s Problems</span>
     </button>
     <div class="deck-actions">
-      <button class="deck-icon" id="searchBtn" type="button" title="Search (/)">
-        <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
+      <button class="deck-icon" id="searchBtn" type="button" aria-label="Search (/)">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="M16.5 16.5 21 21"></path></svg>
       </button>
-      <button class="deck-icon" id="langBtn" type="button" aria-haspopup="menu">
-        <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="8.6"></circle><path d="M3.4 12h17.2"></path><path d="M12 3.4c2.55 2.3 3.85 5.2 3.85 8.6S14.55 18.3 12 20.6c-2.55-2.3-3.85-5.2-3.85-8.6S9.45 5.7 12 3.4z"></path></svg>
-        <span class="lang-badge" id="langBadge" hidden></span>
+      <button class="deck-icon" id="langBtn" type="button" aria-haspopup="dialog" aria-expanded="false" aria-label="Language">
+        <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="8.6"></circle><path d="M3.4 12h17.2"></path><path d="M12 3.4c2.55 2.3 3.85 5.2 3.85 8.6S14.55 18.3 12 20.6c-2.55-2.3-3.85-5.2-3.85-8.6S9.45 5.7 12 3.4z"></path></svg>
+        <span class="lang-badge" id="langBadge" aria-hidden="true" hidden></span>
       </button>
-      <button class="deck-icon deck-theme" id="themeBtn" type="button">
-        <svg class="icon-moon" viewBox="0 0 24 24"><path d="M20 14.5A8 8 0 0 1 9.5 4a.5.5 0 0 0-.7-.55A9 9 0 1 0 20.55 15.2a.5.5 0 0 0-.55-.7z"></path></svg>
-        <svg class="icon-sun" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3.6" fill="currentColor" stroke="none"></circle><path d="M12 2.7v2.2M12 19.1v2.2M2.7 12h2.2M19.1 12h2.2M5.4 5.4l1.55 1.55M17.05 17.05l1.55 1.55M5.4 18.6l1.55-1.55M17.05 6.95l1.55-1.55"></path></svg>
+      <button class="deck-icon deck-theme" id="themeBtn" type="button" aria-label="Toggle theme">
+        <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true"><path d="M20 14.5A8 8 0 0 1 9.5 4a.5.5 0 0 0-.7-.55A9 9 0 1 0 20.55 15.2a.5.5 0 0 0-.55-.7z"></path></svg>
+        <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="3.6" fill="currentColor" stroke="none"></circle><path d="M12 2.7v2.2M12 19.1v2.2M2.7 12h2.2M19.1 12h2.2M5.4 5.4l1.55 1.55M17.05 17.05l1.55 1.55M5.4 18.6l1.55-1.55M17.05 6.95l1.55-1.55"></path></svg>
       </button>
     </div>
     <div class="deck-progress" id="progress" aria-hidden="true"></div>
   </header>
 
-  <div class="pop" id="langMenu" role="menu" hidden>
-    <div class="pop-eyebrow">Language (Machine Translated)</div>
-    <input type="search" id="langSearch" placeholder="Search languages…" autocomplete="off" />
-    <div class="lang-list" id="langList" role="listbox"></div>
+  <div class="pop" id="langMenu" role="dialog" aria-modal="false" aria-label="Language" hidden>
+    <div class="pop-eyebrow" id="langTitle">Language</div>
+    <input type="search" id="langSearch" placeholder="Search languages…" autocomplete="off" aria-label="Search languages" />
+    <div class="lang-list" id="langList" role="listbox" aria-label="Languages"></div>
+    <p class="lang-note" id="langNote"></p>
   </div>
 
-  <div class="overlay" id="searchOverlay" hidden>
-    <div class="search-panel">
-      <input type="search" id="searchInput" placeholder="Search cards…" autocomplete="off" />
-      <div class="search-results" id="searchResults"></div>
-      <button class="close-x" id="searchClose" type="button">✕</button>
-    </div>
-  </div>
-
-  <main class="deck-stage" id="stage">
-    <div class="deck-track" id="track"></div>
+  <main class="deck-stage" id="stage" tabindex="-1">
+    <div class="deck-track" id="track"><!--PRERENDER--></div>
   </main>
 
-  <nav class="deck-bottom">
-    <button class="deck-nav" id="prevBtn" type="button" disabled>
-      <svg viewBox="0 0 24 24"><path d="M14.5 6 9.5 12 14.5 18"></path></svg>
+  <nav class="deck-bottom" aria-label="Deck navigation">
+    <button class="deck-nav" id="prevBtn" type="button" aria-label="Previous card" disabled>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 6 9.5 12 14.5 18"></path></svg>
     </button>
-    <button class="deck-here" id="hereBtn" type="button">
-      <span class="deck-here-tag">CARDS</span>
-      <span class="deck-here-title" id="hereTitle">Cover</span>
+    <button class="deck-here" id="hereBtn" type="button" aria-haspopup="dialog">
+      <span class="deck-here-tag" id="hereMeta">Cover</span>
+      <span class="deck-here-title" id="hereTitle">Christianity’s Problems</span>
       <kbd class="keycap">C</kbd>
     </button>
-    <button class="deck-nav" id="nextBtn" type="button">
-      <svg viewBox="0 0 24 24"><path d="M9.5 6 14.5 12 9.5 18"></path></svg>
+    <button class="deck-nav" id="nextBtn" type="button" aria-label="Next card">
+      <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M9.5 6 14.5 12 9.5 18"></path></svg>
     </button>
   </nav>
 </div>
 
-<div class="overlay center" id="indexOverlay" hidden>
+<div class="overlay" id="searchOverlay" role="dialog" aria-modal="true" aria-labelledby="searchTitle" hidden>
+  <div class="search-panel">
+    <label class="sr-only" id="searchTitle" for="searchInput">Search</label>
+    <input type="search" id="searchInput" placeholder="Search cards…" autocomplete="off" />
+    <div class="search-results" id="searchResults" role="listbox" aria-label="Search results"></div>
+    <button class="close-x" id="searchClose" type="button" aria-label="Close">✕</button>
+  </div>
+</div>
+
+<div class="overlay center" id="indexOverlay" role="dialog" aria-modal="true" aria-labelledby="indexTitle" hidden>
   <div class="index-panel">
     <div class="index-bar">
-      <span class="index-title">Cards</span>
-      <button class="close-x" id="indexClose" type="button" style="position:static">✕</button>
+      <span class="index-title" id="indexTitle">Cards</span>
+      <span class="index-hint" id="indexHint">Jump to a card</span>
+      <button class="close-x" id="indexClose" type="button" style="position:static" aria-label="Close">✕</button>
     </div>
     <div class="index-list" id="indexList"></div>
   </div>
 </div>
 
-<script src="/cards.js"></script>
-<script src="/translations.js"></script>
+<div class="toast" id="toast" role="status" aria-live="polite" hidden></div>
+<div class="sr-only" id="live" aria-live="polite"></div>
+
+<div class="boot" id="boot" aria-hidden="true">
+  <div class="boot-inner">
+    <div class="boot-mark"></div>
+    <div class="boot-text">Loading</div>
+  </div>
+</div>
+
+<script src="cards.js"></script>
+<script src="translations.js"></script>
+<script>/*BOOT*/</script>
 <script>
 (function () {
 'use strict';
 
-try {
-  var CARDS = window.DECK.cards, UI_EN = window.DECK.ui;
-  var LANG_NAMES = { es:['Español','Spanish'], fr:['Français','French'], de:['Deutsch','German'], it:['Italiano','Italian'], pt:['Português','Portuguese'], nl:['Nederlands','Dutch'], sv:['Svenska','Swedish'], da:['Dansk','Danish'], no:['Norsk','Norwegian'], fi:['Suomi','Finnish'], pl:['Polski','Polish'], cs:['Čeština','Czech'], sk:['Slovenčina','Slovak'], hu:['Magyar','Hungarian'], ro:['Română','Romanian'], bg:['Български','Bulgarian'], sr:['Српски','Serbian'], hr:['Hrvatski','Croatian'], sq:['Shqip','Albanian'], el:['Ελληνικά','Greek'], ru:['Русский','Russian'], uk:['Українська','Ukrainian'], tr:['Türkçe','Turkish'], ar:['العربية','Arabic'], he:['עברית','Hebrew'], fa:['فارسی','Persian'], ur:['اردو','Urdu'], hi:['हिन्दी','Hindi'], bn:['বাংলা','Bengali'], ta:['தமிழ்','Tamil'], te:['తెలుగు','Telugu'], id:['Bahasa Indonesia','Indonesian'], ms:['Bahasa Melayu','Malay'], vi:['Tiếng Việt','Vietnamese'], th:['ไทย','Thai'], ja:['日本語','Japanese'], ko:['한국어','Korean'], 'zh-CN':['简体中文','Chinese (Simplified)'], 'zh-TW':['繁體中文','Chinese (Traditional)'], sw:['Kiswahili','Swahili'], af:['Afrikaans','Afrikaans'], la:['Latina','Latin'] };
-  var RTL = { ar:1, he:1, fa:1, ur:1, ps:1, sd:1, ug:1, yi:1, dv:1, ckb:1 };
+var CARDS = window.DECK.cards, UI_EN = window.DECK.ui;
+var BASE = typeof window.__HOME__ === 'string' ? window.__HOME__ : (location.protocol === 'file:' ? '' : '/');
+var RTL_LANGS = { ar:1, he:1, fa:1, ur:1, ps:1, sd:1, ug:1, yi:1, dv:1, ckb:1 };
+var FONTS = {
+  ar: 'https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&display=swap',
+  ur: 'https://fonts.googleapis.com/css2?family=Noto+Naskh+Arabic:wght@400;500;600;700&family=Noto+Nastaliq+Urdu:wght@400;500;600&display=swap'
+};
 
-  function availableLangs() {
-    var list = [['en', 'English', 'Original']];
-    Object.keys(window.TRANSLATIONS || {}).sort().forEach(function(code){
-      var n = LANG_NAMES[code] || [code, code];
-      list.push([code, n[0], n[1]]);
-    });
-    return list;
-  }
+var $ = function (id) { return document.getElementById(id); };
+var appRoot = $('appRoot'), track = $('track'), stage = $('stage'), progress = $('progress');
+var prevBtn = $('prevBtn'), nextBtn = $('nextBtn'), hereBtn = $('hereBtn'), hereMeta = $('hereMeta'), hereTitle = $('hereTitle');
+var brand = $('brand'), brandName = $('brandName'), themeBtn = $('themeBtn');
+var langBtn = $('langBtn'), langMenu = $('langMenu'), langList = $('langList'), langSearch = $('langSearch'), langNote = $('langNote'), langBadge = $('langBadge');
+var searchBtn = $('searchBtn'), searchOverlay = $('searchOverlay'), searchInput = $('searchInput'), searchResults = $('searchResults'), searchClose = $('searchClose');
+var indexOverlay = $('indexOverlay'), indexList = $('indexList'), indexClose = $('indexClose'), indexHint = $('indexHint'), indexTitle = $('indexTitle');
+var toast = $('toast'), live = $('live'), boot = $('boot');
 
-  function esc(str) {
-    return String(str).replace(/[&<>"']/g, function(c){ return { '&':'&amp;', '<':'&lt;', '>':'&gt;', '"':'&quot;', "'":'&#39;' }[c]; });
-  }
+var lang = 'en';
+var dict = null;
+var slides = [];
+var current = 0;
+var loaded = {};
+var pendingLang = null;
+var searchActive = -1;
+var searchHits = [];
+var toastTimer = null;
+var focusReturn = null;
+var searchCache = { key: '', items: [] };
 
-  var lang = 'en';
-  try { lang = localStorage.getItem('deck-lang') || 'en'; } catch (e) {}
-  if (!availableLangs().some(function(l){ return l[0] === lang; })) lang = 'en';
+function esc(value) {
+  return String(value == null ? '' : value).replace(/[&<>"']/g, function (c) {
+    return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c];
+  });
+}
 
-  var currentIndex = 0;
-  var slideEls = [];
+function isRtl(code) {
+  var info = langInfo(code);
+  if (info && info.dir) return info.dir === 'rtl';
+  return !!RTL_LANGS[String(code).split('-')[0]];
+}
 
-  var $ = function(id){ return document.getElementById(id); };
-  var track = $('track'), stage = $('stage'), progress = $('progress'), prevBtn = $('prevBtn'), nextBtn = $('nextBtn'), hereTitle = $('hereTitle'), hereBtn = $('hereBtn'), indexOverlay = $('indexOverlay'), indexList = $('indexList'), indexClose = $('indexClose'), searchOverlay = $('searchOverlay'), searchInput = $('searchInput'), searchResults = $('searchResults'), searchClose = $('searchClose'), searchBtn = $('searchBtn'), langBtn = $('langBtn'), langMenu = $('langMenu'), langList = $('langList'), langSearch = $('langSearch'), langBadge = $('langBadge'), themeBtn = $('themeBtn'), brand = $('brand');
-
-  function ui(key) {
-    var t = window.TRANSLATIONS && window.TRANSLATIONS[lang];
-    return (lang !== 'en' && t && t.ui && t.ui[key]) || UI_EN[key];
-  }
-
-  function getCard(card) {
-    var t = window.TRANSLATIONS && window.TRANSLATIONS[lang];
-    var tc = lang !== 'en' && t && t.cards && t.cards[card.slug];
-    return tc ? Object.assign({}, card, tc) : card;
-  }
-
-  function ct(card, field) {
-    var c = getCard(card);
-    return c[field] || '';
-  }
-
-  function setTheme(mode) {
-    document.documentElement.setAttribute('data-theme', mode);
-    try { localStorage.setItem('deck-theme', mode); } catch (e) {}
-  }
-
-  function applyLangAttrs() {
-    document.documentElement.lang = lang;
-  }
-
-  function renderAll() {
-    applyLangAttrs();
-    var dir = RTL[lang.split('-')[0]] ? 'rtl' : 'ltr';
-    var html = '<div class="slide" dir="' + dir + '"><div class="cover"><div class="cover-kicker">' + ui('kicker') + '</div><h1>' + ui('title') + '</h1><div class="cover-rule"></div><p class="cover-sub">' + ui('sub') + '</p><ul class="cover-hint"><li class="desktop-hint">' + ui('hint1') + '</li><li class="mobile-hint">Swipe left or right to explore.</li><li>' + ui('hint2') + '</li><li>' + ui('hint3') + '</li><li>' + ui('hint4') + '</li></ul></div></div>';
-
-    CARDS.forEach(function(c){
-      var translated = getCard(c);
-      var sources = (c.sources || []).map(function(s){
-        var external = /^https?:\/\//.test(s.url);
-        return '<li><a class="source-link" href="' + esc(s.url) + '"' + (external ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(s.label) + '</a></li>';
-      }).join('');
-      html += '<div class="slide" dir="' + dir + '" data-slug="' + esc(c.slug) + '" aria-hidden="true" inert><div class="card-inner"><div class="card-kicker">' + translated.kicker + '</div><h2 class="card-title">' + translated.title + '</h2><p class="card-claim">' + translated.claim + '</p><div class="card-body">' + translated.body + '</div><div class="sources"><h3>' + esc(ui('sources')) + '</h3><ol>' + sources + '</ol></div></div></div>';
-    });
-
-    track.innerHTML = html;
-    slideEls = Array.prototype.slice.call(track.querySelectorAll('.slide'));
-    
-    // Check URL hash on load
-    var initialIdx = 0;
-    if (window.location.hash) {
-      var targetSlug = window.location.hash.substring(1);
-      var targetIdx = CARDS.findIndex(function(c) { return c.slug === targetSlug; });
-      if (targetIdx > -1) initialIdx = targetIdx + 1; // +1 because slide 0 is the cover
-    }
-    
-    goTo(Math.min(initialIdx, slideEls.length - 1));
-    buildIndex();
-    buildLangList('');
-  }
-
-  function goTo(idx) {
-    if (idx < 0) idx = 0;
-    if (idx >= slideEls.length) idx = slideEls.length - 1;
-    currentIndex = idx;
-    
-    // Update URL hash for shareable links
-    var slug = idx === 0 ? '' : slideEls[idx].getAttribute('data-slug');
-    if (window.location.hash !== (slug ? '#' + slug : '')) {
-      history.replaceState(null, '', slug ? '#' + slug : window.location.pathname + window.location.search);
-    }
-
-    var pct = slideEls.length <= 1 ? 0 : idx / (slideEls.length - 1);
-    progress.style.transform = 'scaleX(' + pct + ')';
-    track.style.transform = 'translateX(-' + (idx * 100) + '%)';
-    slideEls.forEach(function(el,i){ 
-      var isCurrent = i === idx;
-      el.setAttribute('aria-hidden', isCurrent ? 'false' : 'true'); 
-      if (isCurrent) el.removeAttribute('inert');
-      else el.setAttribute('inert', '');
-    });
-    hereTitle.textContent = idx === 0 ? ui('cover') : ct(CARDS[idx - 1], 'title');
-    prevBtn.disabled = idx === 0;
-    nextBtn.disabled = idx === slideEls.length - 1;
-  }
-
-  function buildIndex() {
-    indexList.innerHTML = '';
-    var cover = document.createElement('button');
-    cover.className = 'ix-item';
-    cover.innerHTML = '<span class="ix-num">—</span><span>' + esc(ui('cover')) + '</span>';
-    cover.onclick = function(){ closeIndex(); goTo(0); };
-    indexList.appendChild(cover);
-    CARDS.forEach(function(c, i){
-      var b = document.createElement('button');
-      b.className = 'ix-item';
-      b.innerHTML = '<span class="ix-num">' + (i+1) + '</span><span>' + ct(c, 'title') + '</span>';
-      b.onclick = function(){ closeIndex(); goTo(i+1); };
-      indexList.appendChild(b);
+function ui(key, vars) {
+  var d = dict && dict.ui;
+  var text = (d && d[key]) || UI_EN[key] || '';
+  if (vars) {
+    Object.keys(vars).forEach(function (name) {
+      text = text.split('{' + name + '}').join(vars[name]);
     });
   }
+  return text;
+}
 
-  function buildLangList(filter) {
-    langList.innerHTML = '';
-    var q = (filter || '').toLowerCase();
-    availableLangs().filter(function(l){
-      if (!q) return true;
-      return l[1].toLowerCase().indexOf(q) > -1 || l[2].toLowerCase().indexOf(q) > -1 || l[0].toLowerCase().indexOf(q) > -1;
-    }).forEach(function(l){
-      var b = document.createElement('button');
-      b.className = 'lang-item';
-      b.setAttribute('role', 'option');
-      b.setAttribute('aria-selected', l[0] === lang);
-      b.innerHTML = '<span>' + esc(l[1]) + '</span><small>' + esc(l[2]) + '</small>';
-      b.onclick = function(){ loadLanguage(l[0]); closeLang(); };
-      langList.appendChild(b);
+function cardText(card, field) {
+  var tc = dict && dict.cards && dict.cards[card.slug];
+  var value = tc && tc[field];
+  return value || card[field] || '';
+}
+
+function availableLangs() {
+  var list = [{ code: 'en', native: 'English', english: 'Original', dir: 'ltr', cards: CARDS.length, total: CARDS.length }];
+  var entries = window.TRANSLATION_LANGS;
+  if (Array.isArray(entries)) {
+    entries.forEach(function (entry) {
+      if (!entry || !entry.code || entry.code === 'en') return;
+      list.push({
+        code: entry.code,
+        native: entry.native || entry.code,
+        english: entry.english || entry.code,
+        dir: entry.dir || (RTL_LANGS[String(entry.code).split('-')[0]] ? 'rtl' : 'ltr'),
+        cards: entry.cards == null ? CARDS.length : entry.cards,
+        total: entry.total || CARDS.length
+      });
+    });
+  } else if (window.TRANSLATIONS) {
+    Object.keys(window.TRANSLATIONS).sort().forEach(function (code) {
+      list.push({ code: code, native: code, english: code, dir: isRtl(code) ? 'rtl' : 'ltr', cards: CARDS.length, total: CARDS.length });
     });
   }
+  return list;
+}
 
-  function loadLanguage(code) {
-    if (!availableLangs().some(function(l){ return l[0] === code; })) return;
-    lang = code;
-    try { localStorage.setItem('deck-lang', code); } catch (e) {}
-    langBadge.hidden = (code === 'en');
-    langBadge.textContent = code.toUpperCase();
-    renderAll();
+function langInfo(code) {
+  var found = null;
+  availableLangs().forEach(function (entry) { if (entry.code === code) found = entry; });
+  return found;
+}
+
+function announce(message) {
+  live.textContent = message;
+}
+
+function showToast(message) {
+  toast.textContent = message;
+  toast.hidden = false;
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(function () { toast.hidden = true; }, 4200);
+}
+
+function hideToast() { toast.hidden = true; clearTimeout(toastTimer); }
+
+function loadScript(src) {
+  return new Promise(function (resolve, reject) {
+    var script = document.createElement('script');
+    script.src = src;
+    script.async = true;
+    script.onload = function () { resolve(); };
+    script.onerror = function () { reject(new Error('Could not load ' + src)); };
+    document.head.appendChild(script);
+  });
+}
+
+function applyFont(code) {
+  var href = FONTS[code];
+  if (!href) return;
+  var link = $('langFont');
+  if (!link) {
+    link = document.createElement('link');
+    link.id = 'langFont';
+    link.rel = 'stylesheet';
+    document.head.appendChild(link);
   }
+  if (link.href !== href) link.href = href;
+}
 
-  function openIndex() { indexOverlay.hidden = false; indexClose.focus(); }
-  function closeIndex() { indexOverlay.hidden = true; }
-  function openLang() { langMenu.hidden = false; langSearch.value = ''; buildLangList(''); langSearch.focus(); }
-  function closeLang() { langMenu.hidden = true; }
-  function openSearch() { searchOverlay.hidden = false; searchInput.value = ''; searchResults.innerHTML = ''; searchInput.focus(); }
-  function closeSearch() { searchOverlay.hidden = true; }
+function renderDeck() {
+  var dir = isRtl(lang) ? 'rtl' : 'ltr';
+  document.documentElement.lang = lang;
+  document.documentElement.dir = dir;
+  brandName.textContent = ui('title');
 
-  function runSearch(q) {
-    q = q.trim().toLowerCase();
-    if (!q) { searchResults.innerHTML = ''; return; }
-    var hits = [];
-    CARDS.forEach(function(c, i){
-      var hay = (ct(c, 'title') + ' ' + ct(c, 'claim') + ' ' + ct(c, 'body').replace(/<[^>]+>/g, ' ')).toLowerCase();
-      if (hay.indexOf(q) > -1) hits.push({ c: c, i: i });
-    });
-    searchResults.innerHTML = hits.length ? hits.map(function(x){
-      return '<button class="search-result" data-idx="' + (x.i + 1) + '"><b>' + ct(x.c, 'title') + '</b><span>' + ct(x.c, 'claim').slice(0, 120) + '…</span></button>';
-    }).join('') : '<div style="padding:1rem;color:var(--muted);font-family:var(--sans)">No cards match “' + esc(q) + '”.</div>';
-    Array.prototype.forEach.call(searchResults.querySelectorAll('.search-result'), function(btn){
-      btn.onclick = function(){ closeSearch(); goTo(parseInt(btn.getAttribute('data-idx'), 10)); };
-    });
-  }
+  var notice = lang === 'en' ? '' : '<p class="notice">' + esc(ui('machine')) + '</p>';
+  var html = '<div class="slide" dir="' + dir + '"><div class="cover"><div class="cover-kicker">' + esc(ui('kicker')) + '</div><h1>' + esc(ui('title')) + '</h1><div class="cover-rule"></div><p class="cover-sub">' + esc(ui('sub')) + '</p><p class="cover-method">' + esc(ui('method')) + '</p><ul class="cover-hint"><li class="desktop-hint">' + ui('hint1') + '</li><li class="mobile-hint">' + esc(ui('hintSwipe')) + '</li><li class="desktop-hint">' + ui('hint2') + '</li><li class="desktop-hint">' + ui('hint3') + '</li><li>' + ui('hint4') + '</li></ul>' + notice + '</div></div>';
 
-  prevBtn.onclick = function(){ goTo(currentIndex - 1); };
-  nextBtn.onclick = function(){ goTo(currentIndex + 1); };
-  hereBtn.onclick = openIndex;
-  indexClose.onclick = closeIndex;
-  indexOverlay.onclick = function(e){ if (e.target === indexOverlay) closeIndex(); };
-  searchBtn.onclick = openSearch;
-  searchClose.onclick = closeSearch;
-  searchOverlay.onclick = function(e){ if (e.target === searchOverlay) closeSearch(); };
-  searchInput.oninput = function(){ runSearch(searchInput.value); };
-  langBtn.onclick = function(){ langMenu.hidden ? openLang() : closeLang(); };
-  langSearch.oninput = function(){ buildLangList(langSearch.value); };
-  themeBtn.onclick = function(){ var cur = document.documentElement.getAttribute('data-theme') || 'light'; setTheme(cur === 'dark' ? 'light' : 'dark'); };
-  brand.onclick = function(){ goTo(0); };
-
-  document.addEventListener('click', function(e){
-    if (!langMenu.hidden && !langMenu.contains(e.target) && e.target !== langBtn) closeLang();
+  CARDS.forEach(function (card) {
+    var sources = (card.sources || []).map(function (source) {
+      var external = /^https?:\/\//.test(source.url);
+      return '<li><a class="source-link" dir="auto" href="' + esc(source.url) + '"' + (external ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(source.label) + '</a></li>';
+    }).join('');
+    html += '<div class="slide" dir="' + dir + '" data-slug="' + esc(card.slug) + '" aria-hidden="true" inert>'
+      + '<div class="card-inner">'
+      + '<div class="card-kicker">' + esc(cardText(card, 'kicker')) + '</div>'
+      + '<h2 class="card-title">' + esc(cardText(card, 'title')) + '</h2>'
+      + '<p class="card-claim">' + esc(cardText(card, 'claim')) + '</p>'
+      + '<div class="card-body">' + cardText(card, 'body') + '</div>'
+      + '<div class="sources"><h3>' + esc(ui('sources')) + '</h3><ol>' + sources + '</ol></div>'
+      + '</div></div>';
   });
 
-  document.addEventListener('keydown', function(e){
-    if (e.target.matches('input,textarea,select')) return;
-    if (e.target.closest('summary, button, a')) return;
-    if (!indexOverlay.hidden || !searchOverlay.hidden || !langMenu.hidden) {
-      if (e.key === 'Escape') { closeIndex(); closeSearch(); closeLang(); }
-      return;
-    }
-    if (e.key === 'ArrowLeft') { e.preventDefault(); goTo(currentIndex - 1); }
-    else if (e.key === 'ArrowRight' || e.key === ' ') { e.preventDefault(); goTo(currentIndex + 1); }
-    else if (e.key === 'c' || e.key === 'C') { e.preventDefault(); openIndex(); }
-    else if (e.key === '/') { e.preventDefault(); openSearch(); }
-    else if (e.key === 'Escape') { closeIndex(); closeSearch(); closeLang(); }
+  track.innerHTML = html;
+  slides = Array.prototype.slice.call(track.querySelectorAll('.slide'));
+  searchCache = { key: null, items: [] };
+  goTo(Math.min(current, slides.length - 1), { initial: true, scrollTop: false, url: false });
+  buildIndex();
+  buildLangList(langSearch.value || '');
+  updateChrome();
+}
+
+function goTo(index, options) {
+  options = options || {};
+  if (!slides.length) return;
+  if (index < 0) index = 0;
+  if (index >= slides.length) index = slides.length - 1;
+  var changed = index !== current;
+  current = index;
+
+  var ratio = slides.length <= 1 ? 0 : index / (slides.length - 1);
+  progress.style.transform = 'scaleX(' + ratio + ')';
+  track.style.transform = 'translate3d(-' + (index * 100) + '%,0,0)';
+
+  slides.forEach(function (slide, i) {
+    var active = i === index;
+    slide.setAttribute('aria-hidden', active ? 'false' : 'true');
+    if (active) slide.removeAttribute('inert');
+    else slide.setAttribute('inert', '');
   });
 
-  var touchX = null;
-  stage.ontouchstart = function(e){ touchX = e.touches[0].clientX; };
-  stage.ontouchend = function(e){
-    if (touchX === null) return;
-    var dx = e.changedTouches[0].clientX - touchX;
-    if (Math.abs(dx) > 45) goTo(currentIndex + (dx < 0 ? 1 : -1));
-    touchX = null;
-  };
+  if (changed && !options.initial && slides[index]) slides[index].scrollTop = 0;
+  updateChrome();
+  if (options.url !== false) updateUrl(index);
+  if (changed || options.initial) {
+    var label = index === 0 ? ui('title') : cardText(CARDS[index - 1], 'title');
+    announce((index === 0 ? ui('cover') : ui('cardOf', { n: index, total: CARDS.length })) + '. ' + label);
+  }
+}
 
+function updateChrome() {
+  if (!slides.length) return;
+  var isCover = current === 0;
+  hereMeta.textContent = isCover ? ui('cover') : ui('cardOf', { n: current, total: CARDS.length });
+  hereTitle.textContent = isCover ? ui('title') : cardText(CARDS[current - 1], 'title');
+  document.title = isCover
+    ? (lang === 'en' ? 'Christianity’s Problems — Evidence Deck' : ui('title') + ' — ' + ui('kicker'))
+    : cardText(CARDS[current - 1], 'title') + ' — ' + ui('title');
+  prevBtn.disabled = current === 0;
+  nextBtn.disabled = current === slides.length - 1;
+  prevBtn.setAttribute('aria-label', ui('prev'));
+  nextBtn.setAttribute('aria-label', ui('next'));
+  langBadge.hidden = lang === 'en';
+  var badgeCode = String(lang).split('-')[0].toUpperCase();
+  langBadge.textContent = badgeCode;
+  langBtn.setAttribute('aria-label', ui('langTitle') + (lang === 'en' ? '' : ' ' + badgeCode));
+  searchInput.placeholder = ui('search');
+  langSearch.placeholder = ui('langSearch');
+  langSearch.setAttribute('aria-label', ui('langSearch'));
+  $('langTitle').textContent = ui('langTitle');
+  langBtn.setAttribute('aria-label', ui('langTitle'));
+  langMenu.setAttribute('aria-label', ui('langTitle'));
+  searchBtn.setAttribute('aria-label', ui('search'));
+  langNote.textContent = ui('machine');
+  indexTitle.textContent = ui('indexTitle');
+  indexHint.textContent = ui('indexHint');
+  $('searchTitle').textContent = ui('search');
+  document.querySelectorAll('.lang-item').forEach(function (item) {
+    item.setAttribute('aria-selected', item.getAttribute('data-code') === lang ? 'true' : 'false');
+  });
+  brand.setAttribute('aria-label', ui('title'));
+}
+
+function updateUrl(index) {
+  var slug = index === 0 || !slides[index] ? '' : slides[index].getAttribute('data-slug');
+  var home = typeof window.__HOME__ === 'string' ? window.__HOME__ : location.pathname.replace(/[^/]*$/, '');
+  var query = lang === 'en' ? '' : '?lang=' + encodeURIComponent(lang);
+  var url = home + query + (slug ? '#' + slug : '');
+  try { history.replaceState(null, '', url); } catch (e) { /* file:// may refuse */ }
+}
+
+function buildIndex() {
+  indexList.innerHTML = '';
+  var cover = document.createElement('button');
+  cover.className = 'ix-item';
+  cover.setAttribute('type', 'button');
+  cover.innerHTML = '<span class="ix-num">—</span> <span>' + esc(ui('cover')) + '</span>';
+  cover.onclick = function () { closeIndex(); goTo(0); };
+  indexList.appendChild(cover);
+  CARDS.forEach(function (card, i) {
+    var button = document.createElement('button');
+    button.className = 'ix-item';
+    button.setAttribute('type', 'button');
+    button.setAttribute('aria-current', current === i + 1 ? 'true' : 'false');
+    button.innerHTML = '<span class="ix-num">' + (i + 1) + '</span> <span>' + esc(cardText(card, 'title')) + '</span>';
+    button.onclick = function () { closeIndex(); goTo(i + 1); };
+    indexList.appendChild(button);
+  });
+}
+
+function buildLangList(filter) {
+  var query = String(filter || '').toLowerCase();
+  langList.innerHTML = '';
+  availableLangs().filter(function (entry) {
+    if (!query) return true;
+    return entry.native.toLowerCase().indexOf(query) > -1 || entry.english.toLowerCase().indexOf(query) > -1 || entry.code.toLowerCase().indexOf(query) > -1;
+  }).forEach(function (entry) {
+    var button = document.createElement('button');
+    button.className = 'lang-item';
+    button.type = 'button';
+    button.setAttribute('role', 'option');
+    button.setAttribute('data-code', entry.code);
+    button.setAttribute('aria-selected', entry.code === lang ? 'true' : 'false');
+    var completeness = entry.cards < entry.total ? ' <small>' + entry.cards + '/' + entry.total + '</small>' : '';
+    var countLabel = entry.cards < entry.total ? ' ' + entry.cards + '/' + entry.total : '';
+    button.innerHTML = '<span>' + esc(entry.native) + completeness + '</span> <small>' + esc(entry.english) + '</small>';
+    button.setAttribute('aria-label', entry.native + countLabel + ' ' + entry.english);
+    button.onclick = function () { closeLang(); setLanguage(entry.code); };
+    langList.appendChild(button);
+  });
+}
+
+function setLanguage(code) {
+  if (code === lang) return;
+  if (code === 'en') { applyLanguage('en', null); return; }
+  if (!langInfo(code)) return;
+  if (window.TRANSLATIONS && window.TRANSLATIONS[code]) { applyLanguage(code, window.TRANSLATIONS[code]); return; }
+  var token = code;
+  pendingLang = token;
+  showToast(ui('loading'));
+  loadScript(BASE + 'translations/' + code + '.js').then(function () {
+    if (pendingLang !== token) return;
+    if (!window.TRANSLATIONS || !window.TRANSLATIONS[code]) throw new Error('missing translation');
+    applyLanguage(code, window.TRANSLATIONS[code]);
+  }).catch(function () {
+    if (pendingLang === token) showToast(ui('failed'));
+  }).finally(function () {
+    if (pendingLang === token) pendingLang = null;
+  });
+}
+
+function applyLanguage(code, data) {
+  hideToast();
+  lang = code;
+  dict = data || null;
+  loaded[code] = true;
+  try { localStorage.setItem('deck-lang', code); } catch (e) {}
+  applyFont(code);
+  renderDeck();
+  updateUrl(current);
+  var entry = langInfo(code);
+  announce(ui('title') + '. ' + (entry ? entry.native : code) + '.');
+  try { stage.focus({ preventScroll: true }); } catch (e) {}
+}
+
+function openLang() {
+  langMenu.hidden = false;
+  langBtn.setAttribute('aria-expanded', 'true');
+  langSearch.value = '';
+  buildLangList('');
+  langSearch.focus();
+  document.addEventListener('click', onDocumentClick, true);
+}
+
+function closeLang() {
+  langMenu.hidden = true;
+  langBtn.setAttribute('aria-expanded', 'false');
+  document.removeEventListener('click', onDocumentClick, true);
+}
+
+function onDocumentClick(event) {
+  if (langMenu.hidden) return;
+  if (langMenu.contains(event.target) || langBtn.contains(event.target)) return;
+  closeLang();
+}
+
+function openOverlay(overlay, focusTarget) {
+  focusReturn = document.activeElement;
+  overlay.hidden = false;
+  appRoot.inert = true;
+  if (focusTarget) focusTarget.focus();
+}
+
+function closeOverlay(overlay) {
+  overlay.hidden = true;
+  appRoot.inert = false;
+  if (focusReturn && focusReturn.focus) focusReturn.focus();
+  focusReturn = null;
+}
+
+function openIndex() {
+  buildIndex();
+  openOverlay(indexOverlay, indexClose);
+}
+
+function closeIndex() { closeOverlay(indexOverlay); }
+
+function openSearch() {
+  searchActive = -1;
+  searchInput.value = '';
+  searchResults.innerHTML = '';
+  openOverlay(searchOverlay, searchInput);
+  runSearch('');
+}
+
+function closeSearch() { closeOverlay(searchOverlay); }
+
+function plainText(card) {
+  var holder = document.createElement('div');
+  holder.innerHTML = cardText(card, 'body');
+  return (holder.textContent || '').replace(/\s+/g, ' ').trim();
+}
+
+function getSearchCache() {
+  if (searchCache.key !== lang) {
+    searchCache = {
+      key: lang,
+      items: CARDS.map(function (card, index) {
+        return {
+          index: index + 1,
+          title: cardText(card, 'title'),
+          claim: cardText(card, 'claim'),
+          body: plainText(card)
+        };
+      })
+    };
+  }
+  return searchCache.items;
+}
+
+function highlight(text, query) {
+  if (!query) return esc(text);
+  var lower = text.toLowerCase();
+  var position = lower.indexOf(query);
+  if (position < 0) return esc(text);
+  var start = Math.max(0, position - 60);
+  var end = Math.min(text.length, position + query.length + 110);
+  var prefix = (start > 0 ? '…' : '') + text.slice(start, position);
+  var match = text.slice(position, position + query.length);
+  var suffix = text.slice(position + query.length, end) + (end < text.length ? '…' : '');
+  return esc(prefix) + '<mark>' + esc(match) + '</mark>' + esc(suffix);
+}
+
+function runSearch(value) {
+  var query = String(value || '').trim().toLowerCase();
+  searchResults.innerHTML = '';
+  searchHits = [];
+  searchActive = -1;
+  if (!query) return;
+  getSearchCache().forEach(function (item) {
+    var haystack = (item.title + ' ' + item.claim + ' ' + item.body).toLowerCase();
+    if (haystack.indexOf(query) === -1) return;
+    searchHits.push(item);
+  });
+  if (!searchHits.length) {
+    searchResults.innerHTML = '<div class="search-empty">' + esc(ui('searchEmpty')) + '</div>';
+    return;
+  }
+  searchHits.forEach(function (item, i) {
+    var button = document.createElement('button');
+    button.className = 'search-result';
+    button.type = 'button';
+    button.setAttribute('role', 'option');
+    button.setAttribute('data-idx', item.index);
+    button.setAttribute('aria-selected', 'false');
+    var snippetSource = item.claim.toLowerCase().indexOf(query) > -1 ? item.claim : item.body;
+    button.innerHTML = '<b>' + highlight(item.title, query) + '</b><span>' + highlight(snippetSource, query) + '</span>';
+    button.onclick = function () { closeSearch(); goTo(item.index); };
+    searchResults.appendChild(button);
+  });
+}
+
+function moveSearch(delta) {
+  var items = searchResults.querySelectorAll('.search-result');
+  if (!items.length) return;
+  searchActive = (searchActive + delta + items.length) % items.length;
+  Array.prototype.forEach.call(items, function (item, i) {
+    item.setAttribute('aria-selected', i === searchActive ? 'true' : 'false');
+  });
+  items[searchActive].scrollIntoView({ block: 'nearest' });
+}
+
+function moveIndex(delta) {
+  var items = indexList.querySelectorAll('.ix-item');
+  if (!items.length) return;
+  var active = 0;
+  items.forEach(function (item, i) { if (item === document.activeElement) active = i; });
+  var next = (active + delta + items.length) % items.length;
+  items[next].focus();
+}
+
+function setTheme(mode) {
+  document.documentElement.setAttribute('data-theme', mode);
+  try { localStorage.setItem('deck-theme', mode); } catch (e) {}
+  var meta = document.querySelector('meta[name="theme-color"]');
+  if (meta) meta.setAttribute('content', mode === 'dark' ? '#0d0c0a' : '#fbfaf6');
+}
+
+function openCardFromHash() {
+  var slug = String(location.hash || '').replace(/^#/, '');
+  if (!slug) return -1;
+  for (var i = 0; i < CARDS.length; i++) if (CARDS[i].slug === slug) return i + 1;
+  return -1;
+}
+
+function smartSpace() {
+  var slide = slides[current];
+  if (!slide) return false;
+  var max = slide.scrollHeight - slide.clientHeight;
+  if (max > 8 && slide.scrollTop < max - 8) {
+    slide.scrollBy({ top: Math.round(slide.clientHeight * 0.85), behavior: 'smooth' });
+    return true;
+  }
+  return false;
+}
+
+prevBtn.onclick = function () { goTo(current - 1); };
+nextBtn.onclick = function () { goTo(current + 1); };
+hereBtn.onclick = openIndex;
+brand.onclick = function () { goTo(0); };
+indexClose.onclick = closeIndex;
+indexOverlay.onclick = function (event) { if (event.target === indexOverlay) closeIndex(); };
+searchBtn.onclick = openSearch;
+searchClose.onclick = closeSearch;
+searchOverlay.onclick = function (event) { if (event.target === searchOverlay) closeSearch(); };
+searchInput.oninput = function () { runSearch(searchInput.value); };
+langBtn.onclick = function () { langMenu.hidden ? openLang() : closeLang(); };
+langSearch.oninput = function () { buildLangList(langSearch.value); };
+langSearch.addEventListener('keydown', function (event) {
+  if (event.key === 'Escape') { event.preventDefault(); closeLang(); langBtn.focus(); }
+});
+themeBtn.onclick = function () {
+  var currentTheme = document.documentElement.getAttribute('data-theme') || 'light';
+  setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+};
+
+searchInput.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowDown') { event.preventDefault(); moveSearch(1); }
+  else if (event.key === 'ArrowUp') { event.preventDefault(); moveSearch(-1); }
+  else if (event.key === 'Enter' && searchActive > -1) {
+    var button = searchResults.querySelectorAll('.search-result')[searchActive];
+    if (button) { var idx = parseInt(button.getAttribute('data-idx'), 10); closeSearch(); goTo(idx); }
+  } else if (event.key === 'Escape') { event.preventDefault(); closeSearch(); }
+});
+
+indexList.addEventListener('keydown', function (event) {
+  if (event.key === 'ArrowDown') { event.preventDefault(); moveIndex(1); }
+  else if (event.key === 'ArrowUp') { event.preventDefault(); moveIndex(-1); }
+});
+
+document.addEventListener('keydown', function (event) {
+  if (event.metaKey || event.ctrlKey || event.altKey) return;
+  var target = event.target;
+  if (target && target.closest && target.closest('input, textarea, select, [contenteditable="true"]')) return;
+
+  if (!searchOverlay.hidden) {
+    if (event.key === 'Escape') { event.preventDefault(); closeSearch(); }
+    return;
+  }
+  if (!indexOverlay.hidden) {
+    if (event.key === 'Escape') { event.preventDefault(); closeIndex(); }
+    return;
+  }
+  if (!langMenu.hidden) {
+    if (event.key === 'Escape') { event.preventDefault(); closeLang(); langBtn.focus(); }
+    return;
+  }
+  if (event.key === 'c' || event.key === 'C') { event.preventDefault(); openIndex(); return; }
+  if (event.key === '/') { event.preventDefault(); openSearch(); return; }
+  if (event.key === ' ') {
+    if (target && target.closest && target.closest('summary, button, a')) return;
+    event.preventDefault();
+    if (!smartSpace()) goTo(current + 1);
+    return;
+  }
+  if (event.key === 'Enter' && target && target.closest && target.closest('summary, button, a')) return;
+  if (event.key === 'ArrowLeft') { event.preventDefault(); goTo(current - 1); }
+  else if (event.key === 'ArrowRight') { event.preventDefault(); goTo(current + 1); }
+  else if (event.key === 'Home') { event.preventDefault(); goTo(0); }
+  else if (event.key === 'End') { event.preventDefault(); goTo(slides.length - 1); }
+  else if (event.key === 'PageDown') {
+    event.preventDefault();
+    if (!smartSpace()) goTo(current + 1);
+  }
+  else if (event.key === 'Escape') { closeLang(); }
+});
+
+var touchStartX = null, touchStartY = null;
+stage.addEventListener('touchstart', function (event) {
+  if (event.touches.length !== 1) { touchStartX = touchStartY = null; return; }
+  touchStartX = event.touches[0].clientX;
+  touchStartY = event.touches[0].clientY;
+}, { passive: true });
+stage.addEventListener('touchend', function (event) {
+  if (touchStartX === null) return;
+  var dx = event.changedTouches[0].clientX - touchStartX;
+  var dy = event.changedTouches[0].clientY - touchStartY;
+  touchStartX = touchStartY = null;
+  if (Math.abs(dx) > 55 && Math.abs(dx) > Math.abs(dy) * 1.3) goTo(current + (dx < 0 ? 1 : -1));
+}, { passive: true });
+
+window.addEventListener('hashchange', function () {
+  var index = openCardFromHash();
+  if (index > -1) goTo(index, { url: false });
+  else if (!location.hash) goTo(0, { url: false });
+});
+
+var printOpenState = [];
+window.addEventListener('beforeprint', function () {
+  printOpenState = [];
+  Array.prototype.forEach.call(document.querySelectorAll('details'), function (details) {
+    printOpenState.push([details, details.open]);
+    details.open = true;
+  });
+  Array.prototype.forEach.call(document.querySelectorAll('.slide'), function (slide) { slide.removeAttribute('inert'); });
+});
+window.addEventListener('afterprint', function () {
+  printOpenState.forEach(function (entry) { entry[0].open = entry[1]; });
+  Array.prototype.forEach.call(document.querySelectorAll('.slide'), function (slide, i) {
+    if (i !== current) slide.setAttribute('inert', '');
+  });
+});
+
+function bootDeck() {
+  var saved = null;
   var savedTheme = null;
-  try { savedTheme = localStorage.getItem('deck-theme'); } catch (e) {}
+  var requested = null;
+  try {
+    saved = localStorage.getItem('deck-lang');
+    savedTheme = localStorage.getItem('deck-theme');
+    requested = new URLSearchParams(location.search).get('lang');
+  } catch (e) {}
+  if (requested) saved = requested;
   if (savedTheme === 'dark' || savedTheme === 'light') setTheme(savedTheme);
   else setTheme(document.documentElement.getAttribute('data-theme') || 'light');
 
-  langBadge.hidden = (lang === 'en');
-  langBadge.textContent = lang.toUpperCase();
-
-  renderAll();
-
-} catch (err) {
-  document.body.innerHTML = '<div style="padding:2rem;font-family:system-ui;max-width:600px;margin:0 auto;margin-top:20vh;background:#fff;color:#111;border-radius:12px;box-shadow:0 4px 24px rgba(0,0,0,.1);"><h2 style="color:#b91c1c;margin-top:0;">Application Error</h2><p>The deck failed to load. This usually means there is a syntax error in <code>cards.js</code> or <code>translations.js</code> (e.g., an unescaped quote).</p><pre style="background:#f5f5f5;padding:1rem;border-radius:8px;overflow:auto;font-size:.85rem;">' + err.message + '</pre></div>';
+  if (saved && saved !== 'en' && langInfo(saved) && !(window.TRANSLATIONS && window.TRANSLATIONS[saved])) {
+    return loadScript(BASE + 'translations/' + saved + '.js').then(function () {
+      if (window.TRANSLATIONS && window.TRANSLATIONS[saved]) {
+        lang = saved;
+        dict = window.TRANSLATIONS[saved];
+        loaded[saved] = true;
+        applyFont(saved);
+      }
+    }).catch(function () {}).then(startDeck);
+  }
+  if (saved && saved !== 'en' && window.TRANSLATIONS && window.TRANSLATIONS[saved]) {
+    lang = saved;
+    dict = window.TRANSLATIONS[saved];
+    applyFont(saved);
+  }
+  return Promise.resolve().then(startDeck);
 }
+
+function startDeck() {
+  var entry = langInfo(lang);
+  var initial = typeof window.__INITIAL_SLUG__ === 'string' ? window.__INITIAL_SLUG__ : '';
+  var slug = initial || String(location.hash || '').replace(/^#/, '');
+  var startIndex = 0;
+  for (var i = 0; i < CARDS.length; i++) if (CARDS[i].slug === slug) startIndex = i + 1;
+
+  renderDeck();
+  if (startIndex > 0) goTo(startIndex, { initial: true, url: false });
+  langBadge.hidden = lang === 'en';
+  var badgeCode = String(lang).split('-')[0].toUpperCase();
+  langBadge.textContent = badgeCode;
+  langBtn.setAttribute('aria-label', ui('langTitle') + (lang === 'en' ? '' : ' ' + badgeCode));
+  if (entry && lang !== 'en') announce(ui('title') + '. ' + entry.native + '.');
+  boot.hidden = true;
+  stage.focus({ preventScroll: true });
+}
+
+try {
+  bootDeck().catch(function (error) {
+    boot.innerHTML = '<div class="boot-inner"><div class="boot-text">The deck failed to load</div><p style="max-width:32rem;text-align:center;font-family:system-ui;color:#b91c1c">' + esc(error && error.message ? error.message : String(error)) + '</p></div>';
+    boot.setAttribute('aria-hidden', 'false');
+    boot.hidden = false;
+  });
+} catch (error) {
+  boot.innerHTML = '<div class="boot-inner"><div class="boot-text">The deck failed to load</div><p style="max-width:32rem;text-align:center;font-family:system-ui;color:#b91c1c">' + esc(error.message) + '</p></div>';
+  boot.setAttribute('aria-hidden', 'false');
+}
+
 })();
 </script>
 </body>
