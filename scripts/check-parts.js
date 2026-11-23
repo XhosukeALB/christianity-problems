@@ -48,7 +48,8 @@ function checkParts(lang) {
   }
 
   let complete = 0;
-  for (const card of deck.cards) {
+  const translatable = deck.cards.filter((card) => card.type !== 'essay');
+  for (const card of translatable) {
     const file = path.join(dir, card.slug + '.json');
     if (!fs.existsSync(file)) { errors.push(at(card.slug) + ': missing file'); continue; }
     let translated;
@@ -86,7 +87,7 @@ function checkParts(lang) {
     if (cardOk) complete++;
   }
 
-  return { errors, warnings, cards: complete, total: deck.cards.length };
+  return { errors, warnings, cards: complete, total: translatable.length };
 }
 
 module.exports = { checkParts };

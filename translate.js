@@ -159,12 +159,13 @@ async function run(argv, env = process.env, fetchImpl = globalThis.fetch) {
 
   if (flags.has('--list')) {
     for (const lang of Object.keys(store).sort()) {
-      const stale = deck.cards.filter((card) => {
+      const translatable = deck.cards.filter((card) => card.type !== 'essay');
+      const stale = translatable.filter((card) => {
         const have = store[lang].cards && store[lang].cards[card.slug];
         return !have || have._src !== cardHash(card);
       }).length;
       const uiStale = !store[lang].ui || store[lang].uiSrc !== uiHash(deck.ui);
-      console.log(lang + ': ' + (deck.cards.length - stale) + '/' + deck.cards.length + ' cards current'
+      console.log(lang + ': ' + (translatable.length - stale) + '/' + translatable.length + ' cards current'
         + (stale ? ', ' + stale + ' stale or missing' : '') + (uiStale ? ', ui stale' : ''));
     }
     return;
@@ -198,6 +199,10 @@ async function run(argv, env = process.env, fetchImpl = globalThis.fetch) {
         console.log('ok');
       }
       for (const card of deck.cards) {
+        if (card.type === 'essay') {
+          console.log('  ' + card.slug + ' ... English only (essay; translated in Phase 4)');
+          continue;
+        }
         const have = store[lang].cards[card.slug];
         if (!flags.has('--force') && have && have._src === cardHash(card)) {
           console.log('  ' + card.slug + ' ... up to date');

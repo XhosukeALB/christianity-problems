@@ -145,107 +145,295 @@ window.DECK = {
       ]
     },
     {
-      "slug": "resurrection-contradictions",
-      "kicker": "Textual criticism",
-      "title": "Contradictions in the resurrection accounts",
-      "claim": "The four Gospels disagree about who went to the tomb, what they found, and where and when the risen Jesus appeared. These are not all differences that complementary detail can explain.",
-      "body": `<details class='deck-details' open>
-      <summary class='deck-summary'>The premise</summary>
-      <div class='details-content'>
-      <p>The resurrection is the central claim of Christianity, and the four canonical Gospels are the main narratives that support it. If those narratives disagree on basic historical details, the claim that they preserve independent eyewitness testimony becomes much harder to sustain.</p>
-      <p>Two questions should be kept apart. The first is whether the tomb was found empty and whether Jesus appeared to his followers. The second is whether the Gospel accounts of those events are historically reliable in their details. This card is mainly about the second question: the accounts disagree with each other, and the disagreements are not all complementary detail.</p>
+      "slug": "resurrection",
+      "type": "essay",
+      "kicker": "History",
+      "title": "The resurrection of Jesus",
+      "subtitle": "Christianity’s load-bearing claim, and what the historical evidence can bear.",
+      "claim": "Christianity stakes its truth on the resurrection. The historical evidence is early, but it is thinner than the later Gospels suggest: it establishes that the first Christians believed Jesus had appeared to them, not that his tomb was empty or that he rose bodily.",
+      "summary": "The earliest creed, the empty tomb, the appearances, the minimal facts, and the naturalistic alternatives: a calibrated case against Christianity’s load-bearing claim.",
+      "verdict": "Virtually certain: Jesus was crucified under Pilate, and some followers had experiences they interpreted as appearances. Very likely: those experiences were real to them and transformed the movement. Probable: the empty-tomb narrative is first attested after Paul and is literarily shaped. Not established: a bodily resurrection, or the Easter sequence. Possible but not probable: the resurrection as the best historical explanation.",
+      "updated": "2026-11-23",
+      "readingTime": 15,
+      "body": `<section id="stakes">
+      <h2>What Christianity stakes on the resurrection</h2>
+      <p>Christianity is not primarily a moral code or a philosophy of life. It is a proclamation about an event: God raised Jesus of Nazareth from the dead. Paul makes the stakes explicit. If Christ has not been raised, he writes, “your faith is futile and you are still in your sins”; the dead in Christ have perished, and Christians are “of all people most to be pitied.”<sup class="fn"><a href="#fn1" id="ref1">1</a></sup></p>
+      <p>Paul does not retreat into the claim that Jesus lives on in memory or inspires the church. He stakes everything on an event that either happened or did not. The resurrection is the vindication of Jesus’s identity, the ground of the atonement, and the reason the first Christians reorganized their lives around a crucified man.</p>
+      <p>This essay asks a narrower question than whether God exists: whether the historical evidence can support the claim that God raised Jesus bodily. A historian can examine what the earliest sources say and what best explains the pattern. A historian cannot demonstrate a miracle, but can ask whether the evidence makes the miracle the most reasonable explanation.</p>
+      <p>Three labels keep the argument honest. A claim is <em>possible</em> if nothing rules it out, <em>plausible</em> if evidence points toward it, and <em>probable</em> if it explains the evidence better than the alternatives. Much of the case for the resurrection moves from possibility to possibility. Possibility is not enough.</p>
+      
+      </section>
+      
+      <section id="earliest-evidence">
+      <h2>The earliest evidence</h2>
+      <p>The earliest surviving list of resurrection appearances is not a Gospel. It is a paragraph in Paul’s first surviving letter to the Corinthians, written around the year 50, roughly twenty years after the crucifixion. Paul introduces it with the technical language of tradition: “I delivered to you as of first importance what I also received.”<sup class="fn"><a href="#fn2" id="ref2">2</a></sup> He is passing on material that predates him.</p>
+      <p>The material is usually called a creed, and its date is one of the few points on which conservative and critical scholars largely agree. The formula contains Semitic features and pre-Pauline language, and Paul says he received it. Most critical scholars date it to the 30s or early 40s, within a few years of the crucifixion.<sup class="fn"><a href="#fn3" id="ref3">3</a></sup> Even skeptics grant that the tradition is very early. That is the strongest single fact in the Christian case: the belief that Jesus had been raised did not emerge decades later as a legend.</p>
+      <p>What does the creed actually say? Christ died for our sins in accordance with the Scriptures, was buried, was raised on the third day in accordance with the Scriptures, and appeared to Cephas, then to the twelve, then to more than five hundred at once, then to James, then to all the apostles, and finally to Paul.<sup class="fn"><a href="#fn4" id="ref4">4</a></sup> It is a compressed summary of the kerygma, not a narrative. It gives us the earliest Christian interpretation of the events, not a report of them.</p>
+      <p>What it does not say is just as important. It does not mention the empty tomb, the women, the stone, the guards, Joseph of Arimathea, or the location of the appearances. It does not describe Jesus eating, being touched, or walking with his disciples. It does not say the appearances were physical. The one verb it uses is “appeared,” the ordinary language of something being seen or revealed, not of a corpse being examined.</p>
+      <p>“Raised on the third day in accordance with the Scriptures” is theological before it is chronological. It places the event in the pattern of Scripture, not in the sequence of a witnessed weekend. That does not make the claim false. It does mean that the creed is not the kind of evidence that can establish the physical details the later Gospels supply.</p>
+      <p>The creed is therefore both the strongest and the thinnest evidence in the case. It is strong because it is early and shows that the resurrection was central from the start. It is thin because it tells us what the first Christians believed, not what happened to the body. The distance between those two things is where the rest of the argument lives.</p>
+      
+      <details class="evidence">
+      <summary>The creed in full: 1 Corinthians 15:3–8 and 14–19</summary>
+      <div class="evidence-body">
+      <blockquote>
+      <p>For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures, and that he appeared to Cephas, then to the twelve. Then he appeared to more than five hundred brothers at one time, most of whom are still alive, though some have fallen asleep. Then he appeared to James, then to all the apostles. Last of all, as to one untimely born, he appeared also to me.</p>
+      <cite>1 Corinthians 15:3–8, ESV</cite>
+      </blockquote>
+      <blockquote>
+      <p>And if Christ has not been raised, then our preaching is in vain and your faith is in vain. We are even found to be misrepresenting God, because we testified about God that he raised Christ, whom he did not raise if it is true that the dead are not raised. For if the dead are not raised, not even Christ has been raised. And if Christ has not been raised, your faith is futile and you are still in your sins. Then those also who have fallen asleep in Christ have perished. If in Christ we have hope in this life only, we are of all people most to be pitied.</p>
+      <cite>1 Corinthians 15:14–19, ESV</cite>
+      </blockquote>
       </div>
       </details>
-      <details class='deck-details'>
-      <summary class='deck-summary'>The primary texts</summary>
-      <div class='details-content'>
-      <p>The four accounts can be compared row by row. The differences begin with the most basic facts.</p>
-      <div class='table-wrap'>
-      <table class='compare'>
-      <thead>
-      <tr><th scope='col'>Detail</th><th scope='col'>Mark</th><th scope='col'>Matthew</th><th scope='col'>Luke</th><th scope='col'>John</th></tr>
-      </thead>
+      <details class="evidence">
+      <summary>What the creed includes and what it leaves out</summary>
+      <div class="evidence-body">
+      <div class="table-wrap">
+      <table>
+      <thead><tr><th>In the creed</th><th>Not in the creed</th></tr></thead>
       <tbody>
-      <tr><th scope='row'>Who goes to the tomb</th><td>Mary Magdalene, Mary the mother of James, and Salome (16:1)</td><td>Mary Magdalene and the other Mary (28:1)</td><td>Mary Magdalene, Joanna, Mary the mother of James, and other women (24:10)</td><td>Mary Magdalene alone (20:1)</td></tr>
-      <tr><th scope='row'>The stone</th><td>Already rolled away when they arrive (16:4)</td><td>An angel descends and rolls it back as they watch (28:2)</td><td>Already rolled away (24:2)</td><td>Already rolled away, while it is still dark (20:1)</td></tr>
-      <tr><th scope='row'>Who they see</th><td>A young man in a white robe, sitting on the right (16:5)</td><td>An angel of the Lord (28:2); later Jesus meets them (28:9)</td><td>Two men in dazzling apparel (24:4)</td><td>Two angels in white, at the head and the feet (20:12)</td></tr>
-      <tr><th scope='row'>What they do</th><td>They flee and say nothing to anyone, for they are afraid (16:8)</td><td>They run to tell the disciples (28:8)</td><td>They tell the eleven and the rest (24:9-10)</td><td>Mary tells the disciples (20:2)</td></tr>
-      <tr><th scope='row'>First appearance</th><td>None in the earliest text; the longer ending has Jesus appear to Mary Magdalene (16:9)</td><td>To the women near the tomb (28:9), then to the eleven in Galilee (28:16)</td><td>To two disciples on the road to Emmaus (24:13-15)</td><td>To Mary Magdalene at the tomb (20:14-16)</td></tr>
+      <tr><td>Death “for our sins”</td><td>The empty tomb</td></tr>
+      <tr><td>Burial</td><td>The women at the tomb</td></tr>
+      <tr><td>Raised “on the third day”</td><td>The stone, the guards, the earthquake</td></tr>
+      <tr><td>Appearances to Cephas, the Twelve, 500, James, Paul</td><td>Any location: Jerusalem, Galilee, Emmaus</td></tr>
+      <tr><td>The claim that most of the 500 were still alive</td><td>Any physical demonstration: eating, touching, wounds</td></tr>
       </tbody>
       </table>
       </div>
-      <p>Mark's account ends, in the earliest manuscripts, with the women fleeing in fear and saying nothing to anyone (16:8). The verses that follow, Mark 16:9-20, are absent from the earliest manuscripts and are widely regarded as a later addition. The earliest Gospel therefore has no resurrection appearance at all in its original form.</p>
-      <blockquote>“And they went out and fled from the tomb, for trembling and astonishment had seized them, and they said nothing to anyone, for they were afraid.”<cite><a class='source-link' href='https://www.biblegateway.com/passage/?search=Mark%2016%3A8&version=ESV' target='_blank' rel='noopener noreferrer'>Mark 16:8</a></cite></blockquote>
-      <blockquote>“So they departed quickly from the tomb with fear and great joy, and ran to tell his disciples.”<cite><a class='source-link' href='https://www.biblegateway.com/passage/?search=Matthew%2028%3A8&version=ESV' target='_blank' rel='noopener noreferrer'>Matthew 28:8</a></cite></blockquote>
       </div>
       </details>
-      <details class='deck-details'>
-      <summary class='deck-summary'>The appearances</summary>
-      <div class='details-content'>
-      <p>The earliest written account of the appearances is not a Gospel but Paul's first letter to the Corinthians, written around the 50s CE, some twenty years before Mark. Paul gives a list that he says he received:</p>
-      <blockquote>“For I delivered to you as of first importance what I also received: that Christ died for our sins in accordance with the Scriptures, that he was buried, that he was raised on the third day in accordance with the Scriptures, and that he appeared to Cephas, then to the twelve. Then he appeared to more than five hundred brothers at one time, most of whom are still alive, though some have fallen asleep. Then he appeared to James, then to all the apostles. Last of all, as to one untimely born, he appeared also to me.”<cite><a class='source-link' href='https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A3-8&version=ESV' target='_blank' rel='noopener noreferrer'>1 Corinthians 15:3-8</a></cite></blockquote>
-      <p>Paul's list is the earliest evidence, and it differs from the Gospels in what it includes and omits. It says nothing about the empty tomb, the women, or any location. It names Cephas, the twelve, five hundred unnamed people, James, and Paul himself. The Gospels, by contrast, place the first appearances in Jerusalem (Luke, John) or Galilee (Matthew), and they disagree about who saw Jesus first.</p>
-      <p>Luke and Acts also disagree with each other about the ascension. In Luke's Gospel, Jesus is taken up into heaven on the evening of the resurrection day, after the meal at Emmaus (Luke 24:50-51). In Acts, written by the same author, Jesus appears to the disciples for forty days before ascending (Acts 1:3). Harmonizers read Luke's Gospel as a compressed account, but the text as written places the ascension on the same day.</p>
+      </section>
+      
+      <section id="empty-tomb">
+      <h2>The empty tomb</h2>
+      <p>The earliest narrative of the empty tomb is in Mark, written around the year 70, some forty years after the crucifixion. Mark’s account is short and strange. The women come to anoint the body, find the stone rolled away, see a young man in white, and are told that Jesus has risen and is going ahead of them to Galilee. They flee in terror and, in the earliest manuscripts, say nothing to anyone.<sup class="fn"><a href="#fn5" id="ref5">5</a></sup></p>
+      <p>The case for the tomb’s historicity is not frivolous. The story is set in Jerusalem, where it could have been checked. The first witnesses are women, whose testimony was not highly valued in the ancient world; an inventor would likely have chosen more credible witnesses. Joseph of Arimathea is a named member of the council. Mark’s account is spare, without the later apologetic embellishments. And the creed’s word “buried” at least implies a burial, even if it does not mention a tomb.<sup class="fn"><a href="#fn6" id="ref6">6</a></sup></p>
+      <p>The case against is stronger, though it does not amount to a disproof. Paul never mentions the tomb, even when he is defending the resurrection at length. “Buried” can mean exactly that—Jesus was buried—without implying that the tomb was later found empty. Mark’s scene is literarily shaped: the young man, the announcement “he is not here,” the prediction of Galilee, and the women’s silence all serve the Gospel’s theological purposes. Matthew adds an earthquake, an angel, and guards; Luke and John add physical demonstrations. The later the account, the more it answers the questions a skeptic would ask.<sup class="fn"><a href="#fn7" id="ref7">7</a></sup></p>
+      <p>The burial itself is contested. A member of the Sanhedrin burying a crucified criminal is historically possible—Jewish law required burial before nightfall—but Roman practice often left the crucified to scavengers, and the Gospels are the only sources that name Joseph. The burial is therefore not independently attested, and the empty tomb depends on it.<sup class="fn"><a href="#fn8" id="ref8">8</a></sup></p>
+      <p>The strongest Christian reply is that the empty tomb is not essential to the resurrection. The appearances are the core of the earliest creed; the tomb is a later narrative inference. That is fair, and it shifts the weight of the case to the appearances. But it also concedes something important: if the tomb is not secure, the physical, bodily character of the resurrection is not secure either. The later Gospels’ insistence on an empty tomb and a tangible body is doing apologetic work the earliest sources do not do.</p>
+      <p class="establishes"><strong>What this establishes:</strong> a tomb tradition existed by the time Mark wrote, and it may be earlier. It does not establish that the tomb was empty, or what happened to the body.</p>
+      
+      <details class="evidence">
+      <summary>The four accounts, side by side</summary>
+      <div class="evidence-body">
+      <div class="table-wrap">
+      <table>
+      <thead><tr><th>Detail</th><th>Mark</th><th>Matthew</th><th>Luke</th><th>John</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">Who goes to the tomb</th><td>Mary Magdalene, Mary the mother of James, and Salome (16:1)</td><td>Mary Magdalene and the other Mary (28:1)</td><td>Mary Magdalene, Joanna, Mary the mother of James, and other women (24:10)</td><td>Mary Magdalene alone (20:1)</td></tr>
+      <tr><th scope="row">The stone</th><td>Already rolled away when they arrive (16:4)</td><td>An angel descends and rolls it back as they watch (28:2)</td><td>Already rolled away (24:2)</td><td>Already rolled away, while it is still dark (20:1)</td></tr>
+      <tr><th scope="row">Who they see</th><td>A young man in a white robe, sitting on the right (16:5)</td><td>An angel of the Lord (28:2); later Jesus meets them (28:9)</td><td>Two men in dazzling apparel (24:4)</td><td>Two angels in white, at the head and the feet (20:12)</td></tr>
+      <tr><th scope="row">What they do</th><td>They flee and say nothing to anyone, for they are afraid (16:8)</td><td>They run to tell the disciples (28:8)</td><td>They tell the eleven and the rest (24:9–10)</td><td>Mary tells the disciples (20:2)</td></tr>
+      <tr><th scope="row">First appearance</th><td>None in the earliest text; the longer ending has Jesus appear to Mary Magdalene (16:9)</td><td>To the women near the tomb (28:9), then to the eleven in Galilee (28:16)</td><td>To two disciples on the road to Emmaus (24:13–15)</td><td>To Mary Magdalene at the tomb (20:14–16)</td></tr>
+      </tbody>
+      </table>
+      </div>
       </div>
       </details>
-      <details class='deck-details'>
-      <summary class='deck-summary'>Harmonization: what it can and cannot explain</summary>
-      <div class='details-content'>
-      <p>Some differences are easily reconciled. Ancient authors selected and arranged material, so one writer may mention only one angel where another mentions two, and Mary Magdalene may have gone to the tomb more than once. A single angel can speak for two, and different witnesses can remember different details.</p>
-      <p>Other differences resist this treatment without adding events the texts do not mention. Mark says the women told no one; Matthew says they ran to tell the disciples. Mark has the stone already rolled away; Matthew has an angel roll it back as the women arrive. Luke places the ascension on resurrection day; Acts places it forty days later. Matthew has the disciples meet Jesus in Galilee; Luke has them meet him in Jerusalem and does not allow for a Galilean trip before the ascension. Matthew alone has guards at the tomb. Each of these can be smoothed over by positing an unrecorded trip, an unmentioned second visit, or a second group of women, but the reconstruction is doing the work that the text does not do.</p>
-      <p>This matters because harmonization is often presented as if it simply reads the texts together. In practice it requires deciding, in advance, that no contradiction is possible, and then supplying the missing narrative that removes it.</p>
+      <details class="evidence">
+      <summary>Mark 16:8 and the longer ending</summary>
+      <div class="evidence-body">
+      <p>The earliest manuscripts of Mark—Codex Sinaiticus and Codex Vaticanus—end at 16:8, with the women fleeing and saying nothing. The verses that follow, Mark 16:9–20, are absent from the earliest witnesses and are widely regarded as a later addition. The textual evidence is summarized in Metzger’s standard commentary.<sup class="fn"><a href="#fn9" id="ref9">9</a></sup></p>
+      <blockquote><p>And they went out and fled from the tomb, for trembling and astonishment had seized them, and they said nothing to anyone, for they were afraid.</p><cite>Mark 16:8, ESV</cite></blockquote>
       </div>
       </details>
-      <details class='deck-details'>
-      <summary class='deck-summary'>The apologetic defenses</summary>
-      <div class='details-content'>
-      <p>Defenders of the accounts offer several responses. They are not equally strong, and the best of them concede real differences.</p>
-      <details class='nested-supplement'><summary>Eyewitness testimony (Bauckham)</summary><div class='nested-body'>
-      <p><strong>The defence:</strong> The Gospels preserve named eyewitnesses, especially in the Jerusalem community, and ancient historians valued such testimony. Richard Bauckham argues that the names in the narratives, including the women at the tomb, are markers of eyewitness source material.</p>
-      <p><strong>The problem:</strong> The names may preserve sources without making the finished narratives eyewitness reports. Matthew and Luke appear to use Mark, so the Synoptic Gospels are not independent. If the later writers reworked Mark's story, the differences reflect literary editing at least as much as separate memory, and Bauckham's thesis remains contested among specialists.</p>
-      </div></details>
-      <details class='nested-supplement'><summary>Compositional devices (Licona)</summary><div class='nested-body'>
-      <p><strong>The defence:</strong> Ancient historians used recognized devices such as rearrangement, compression, and the transfer of sayings between scenes. Michael Licona argues that the Gospel writers did the same, so differences in detail do not undermine the core events.</p>
-      <p><strong>The problem:</strong> This explains why the accounts differ, but it also lowers the historical value of the details that are supposed to be reported. If the evangelists reshaped scenes to make theological points, then the specific tomb and appearance narratives cannot be treated as straightforward reportage, which is exactly the critical conclusion.</p>
-      </div></details>
-      <details class='nested-supplement'><summary>Harmonization (Craig, Wenham)</summary><div class='nested-body'>
-      <p><strong>The defence:</strong> The accounts can be combined into a single sequence in which nothing is lost, and the apparent contradictions dissolve once the different perspectives are coordinated.</p>
-      <p><strong>The problem:</strong> The harmonized sequence is not in any source. It depends on speculative additions, and some tensions remain, notably Mark's silence command against Matthew's report and the two different ascension chronologies. A reconstruction that requires events no author mentions is not evidence that the authors agree.</p>
-      </div></details>
-      <details class='nested-supplement'><summary>The minimal facts approach (Craig, Habermas)</summary><div class='nested-body'>
-      <p><strong>The defence:</strong> Historical argument does not need the disputed details. It needs only the facts that critical scholars broadly accept: Jesus died by crucifixion, was buried, and appeared to his followers, who were transformed and willing to die for the claim.</p>
-      <p><strong>The problem:</strong> The minimal facts are selected because they are widely agreed, not because they are the best-attested details, and they yield a much thinner claim than the Gospel narratives. The empty tomb, the women, the guards, and the specific appearances are precisely the parts that are contested. The minimal facts can support the claim that the disciples believed they had seen the risen Jesus; they do not establish the Gospel accounts as reliable history.</p>
-      </div></details>
+      </section>
+      
+      <section id="appearances">
+      <h2>The appearances: vision or body?</h2>
+      <p>The earliest list of appearances is Paul’s: Cephas, the Twelve, more than five hundred at once, James, all the apostles, and finally Paul.<sup class="fn"><a href="#fn10" id="ref10">10</a></sup> The verb is <em>ōphthē</em>, “he appeared” or “he was seen,” the passive of “to see.” It is used elsewhere in the New Testament for revelatory appearances, not ordinary physical sight. That does not settle the question, but it sets the register: the earliest Christian language for the resurrection is the language of revelation.</p>
+      <p>Paul’s own account is the most revealing. In Galatians he says God “was pleased to reveal his Son to me”—the Greek can also mean “in me”—and describes a revelation, not a meeting with a risen corpse.<sup class="fn"><a href="#fn11" id="ref11">11</a></sup> In 1 Corinthians he asks, “Have I not seen Jesus our Lord?” and places himself last, “as to one untimely born.” In 2 Corinthians he describes a man caught up to the third heaven, “whether in the body or out of the body I do not know.”<sup class="fn"><a href="#fn12" id="ref12">12</a></sup> Paul does not describe touching, eating, or examining wounds.</p>
+      <p>Paul’s resurrection body is not the later Gospel portrait. What is sown is a natural body; what is raised is a spiritual body; “flesh and blood cannot inherit the kingdom of God.”<sup class="fn"><a href="#fn13" id="ref13">13</a></sup> He describes a transformed body, continuous with the old and not identical to it—not a reanimated corpse. That is not Luke’s Jesus, who says, “a spirit does not have flesh and bones as you see that I have,” or John’s Jesus, who invites Thomas to touch his wounds.<sup class="fn"><a href="#fn14" id="ref14">14</a></sup></p>
+      <p>Luke and John are the latest Gospels and the most concerned to answer the objection that the resurrection was only a vision. Luke has Jesus eat broiled fish; John invites Thomas to put his hand in his side. These are the latest layer of the tradition: they show what later Christians wanted to affirm, not necessarily what the earliest witnesses experienced.</p>
+      <p>The Acts accounts are later still and do not agree. In Acts 9 the men with Saul hear the voice but see no one. In Acts 22 they see the light but do not hear the voice. In Acts 26 the light is brighter than the sun and all fall.<sup class="fn"><a href="#fn15" id="ref15">15</a></sup> These are three literary retellings by the same author, not independent reports.</p>
+      <p>The five hundred are the weakest link: mentioned once, by Paul, with no names and no independent attestation. Paul says most were still alive, an invitation to check; no record survives of anyone doing so. James is better attested in that he later led the Jerusalem church, but the New Testament does not say he was a skeptic converted by an appearance. That is inference, not datum.<sup class="fn"><a href="#fn16" id="ref16">16</a></sup></p>
+      <p class="establishes"><strong>What this establishes:</strong> early Christians had experiences they interpreted as appearances of the risen Jesus, and those experiences were central from the beginning. It does not establish that the appearances were physical, or caused by a bodily resurrection.</p>
+      
+      <details class="evidence">
+      <summary>Paul’s own accounts</summary>
+      <div class="evidence-body">
+      <blockquote><p>But when he who had set me apart before I was born, and who called me by his grace, was pleased to reveal his Son to me, in order that I might preach him among the Gentiles, I did not immediately consult with anyone;</p><cite>Galatians 1:15–16, ESV</cite></blockquote>
+      <blockquote><p>Am I not free? Am I not an apostle? Have I not seen Jesus our Lord? Are not you my workmanship in the Lord?</p><cite>1 Corinthians 9:1, ESV</cite></blockquote>
+      <blockquote><p>I must go on boasting. Though there is nothing to be gained by it, I will go on to visions and revelations of the Lord. I know a man in Christ who fourteen years ago was caught up to the third heaven—whether in the body or out of the body I do not know, God knows.</p><cite>2 Corinthians 12:1–2, ESV</cite></blockquote>
       </div>
       </details>
-      <details class='deck-details'>
-      <summary class='deck-summary'>The verdict</summary>
-      <div class='details-content'>
-      <p>It is <em>virtually certain</em> that the four Gospels disagree about who went to the tomb, what they saw there, and where and to whom Jesus first appeared. It is <em>very likely</em> that Mark's original text ended at 16:8, and <em>highly probable</em> that Matthew and Luke used Mark.</p>
-      <p>It is <em>probable</em> that the differences reflect literary and theological shaping, not only independent memory. It is <em>plausible</em> that some harmonizations are correct, and the core claim that Jesus appeared to his followers is attested early, including by Paul. But the detailed narratives cannot be treated as four independent, mutually consistent eyewitness depositions.</p>
-      <p><strong>The bottom line:</strong> The resurrection can still be affirmed as a matter of faith and historical judgment, but not by ignoring the conflicts in the sources. The honest historical position is that the earliest Christians believed Jesus had been raised, and that the stories of how they came to believe it grew and diverged as they were told.</p>
+      <details class="evidence">
+      <summary>The three accounts of Paul’s conversion</summary>
+      <div class="evidence-body">
+      <div class="table-wrap">
+      <table>
+      <thead><tr><th>Detail</th><th>Acts 9</th><th>Acts 22</th><th>Acts 26</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">The light</th><td>A light from heaven</td><td>A great light from heaven</td><td>A light brighter than the sun</td></tr>
+      <tr><th scope="row">His companions</th><td>Stood speechless; heard the voice but saw no one</td><td>Saw the light but did not hear the voice</td><td>All fell to the ground</td></tr>
+      <tr><th scope="row">The commission</th><td>Given to Ananias</td><td>Given through Ananias</td><td>Given directly by Jesus</td></tr>
+      </tbody>
+      </table>
       </div>
-      </details>`,
+      </div>
+      </details>
+      </section>
+      
+      <section id="minimal-facts">
+      <h2>The “minimal facts”</h2>
+      <p>A popular argument, associated with Gary Habermas and Michael Licona, proceeds by “minimal facts”: take only the claims critical scholars of all stripes grant, and show that the resurrection is the best explanation of them.<sup class="fn"><a href="#fn17" id="ref17">17</a></sup> The method avoids disputed texts. It is also vulnerable to a selection problem: the facts that are “minimal” are the ones critics already accept, not necessarily the ones that carry the most explanatory weight.</p>
+      <p>The usual list includes the crucifixion, the burial, the empty tomb, the appearances, the disciples’ transformation, the conversion of James, the conversion of Paul, and the martyrdom of the apostles. Some are well attested. The crucifixion is reported by Tacitus, Josephus (in a partly interpolated passage), Paul, and all four Gospels; Tacitus and Josephus also name Pilate.<sup class="fn"><a href="#fn18" id="ref18">18</a></sup> That the first Christians believed Jesus had appeared is attested by Paul’s letters, the earliest Christian documents.</p>
+      <p>Other items are overstated. The empty tomb is not in Paul and is first narrated by Mark, decades later; it is a debated inference, not a minimal fact. The five hundred are named by one source and cannot be checked. The martyrdom of the apostles is partly attested and partly legendary: the New Testament reports James son of Zebedee’s death, but Peter and Paul’s deaths come from later traditions, and most apostles’ deaths are not reported. Dying for a belief can show sincerity; it cannot show the belief is true.<sup class="fn"><a href="#fn19" id="ref19">19</a></sup></p>
+      <p>James is a useful case. Paul says the risen Jesus appeared to James and calls him “the Lord’s brother” in Galatians. James later led the Jerusalem church. But the New Testament does not say he was a skeptic converted by an appearance; that detail is later inference. The appearance is early and important, but it does not carry the weight the popular argument places on it.</p>
+      <p>The method can establish a core of early belief: Jesus died, his followers believed they saw him alive, and the movement was transformed. It cannot establish the truth of that belief. The gap between “they believed” and “it happened” is the gap the resurrection claim has to cross.</p>
+      <p class="establishes"><strong>What this establishes:</strong> a historically credible core of early belief and personal transformation. It does not establish the empty tomb, the physical nature of the appearances, or the truth of the resurrection.</p>
+      
+      </section>
+      
+      <section id="naturalistic-explanations">
+      <h2>Naturalistic explanations, and their strongest objections</h2>
+      <p>An adequate explanation must account for the crucifixion, the early belief, the appearances, the tomb tradition (if historical), and the movement’s survival. No single naturalistic theory does all of that neatly. The question is not whether a theory is possible, but whether it explains the evidence better than the resurrection hypothesis.</p>
+      
+      <h3>Conspiracy and the stolen body</h3>
+      <p><strong>The explanation:</strong> the disciples stole the body and invented the resurrection, or someone with access to the tomb removed it and the disciples read the empty tomb as a resurrection.</p>
+      <p><strong>The strongest objection:</strong> a conspiracy requires motive, coordination, and silence under pressure. The disciples had little to gain and much to lose; the movement was persecuted; the authorities wanted the body produced. No ancient source reports a conspiracy, and the guard story appears only in Matthew.</p>
+      <p><strong>Reply:</strong> the objection depends on details the earliest sources do not supply. Mark has no guard; Paul does not mention the tomb. People endure hardship for sincere beliefs, and sincerity is not truth. The conspiracy is weak, but a weak alternative does not make the resurrection probable.</p>
+      
+      <h3>Visionary experience and hallucination</h3>
+      <p><strong>The explanation:</strong> the appearances were visionary experiences produced by grief, expectation, and the intense atmosphere of the first community. Paul’s encounter was a vision; the others may have been too.</p>
+      <p><strong>The strongest objection:</strong> hallucinations are private, and the list includes groups; a collective hallucination of the required kind is implausible. Paul was a persecutor, not a grieving follower. A vision does not explain an empty tomb.</p>
+      <p><strong>Reply:</strong> the objection assumes a clinical model the evidence does not require. Bereavement visions are common, not mental illness.<sup class="fn"><a href="#fn22" id="ref22">22</a></sup> The appearance language is vision language; Paul’s account is explicitly revelatory. Group experiences can be shared in high-expectation settings. The tomb remains unexplained—but the tomb is disputed, not secure.</p>
+      
+      <h3>Legend and literary development</h3>
+      <p><strong>The explanation:</strong> the stories grew. The earliest Christians had visions of Jesus’s presence; later writers turned them into the tomb, guards, walking, eating, and touching.</p>
+      <p><strong>The strongest objection:</strong> the creed is too early for legend. Paul received it within a few years, and it already contains the core claim.</p>
+      <p><strong>Reply:</strong> the creed is early but thin. It lacks the tomb, the women, the guards, the physical demonstrations, and the appearance narratives—exactly the elements that appear later and show literary shaping. A legend can grow around a real experience without the experience being what the legend says. The early creed establishes early belief, not the later narrative.</p>
+      
+      <h3>The wrong tomb, or a mistaken identity</h3>
+      <p><strong>The explanation:</strong> the women went to the wrong tomb, or another body was mistaken for Jesus, and the error was never corrected.</p>
+      <p><strong>The strongest objection:</strong> the mistake would have been easy to correct in Jerusalem, and the authorities had every incentive to produce the body.</p>
+      <p><strong>Reply:</strong> this is among the weakest explanations. It can be a partial factor—confusion at the tomb is possible—but it does not explain the appearances.</p>
+      
+      <h3>Cognitive dissonance and meaning-making</h3>
+      <p><strong>The explanation:</strong> the disciples’ expectations were shattered by the crucifixion, and they resolved the dissonance by reinterpreting Jesus’s death as victory and his presence as continued in visions and community.</p>
+      <p><strong>The strongest objection:</strong> dissonance explains why a group might persist, not why specific individuals reported specific appearances.</p>
+      <p><strong>Reply:</strong> fair. It is a supplement, not a stand-alone explanation: it helps explain resilience, not the origin of the appearance claims.</p>
+      
+      <h3>The resurrection hypothesis</h3>
+      <p><strong>The explanation:</strong> God raised Jesus bodily, and the appearances, the tomb, and the transformation are explained by that event.</p>
+      <p><strong>The strongest objection:</strong> the hypothesis invokes a miracle, which has a very low prior probability on any ordinary view of nature. The evidence is confessional and decades later, and Paul, the earliest, does not describe the physical details the later sources use.</p>
+      <p><strong>Reply:</strong> the resurrection hypothesis has explanatory scope.<sup class="fn"><a href="#fn21" id="ref21">21</a></sup> It explains the appearances, the tomb tradition, and the transformation in one stroke. But explanatory scope is not enough. A hypothesis that explains everything by positing an unprecedented event needs independent evidence proportional to the claim, and this evidence is late, internal to the movement, and shaped by the belief it is meant to explain. The resurrection remains possible; the question is whether it is probable.</p>
+      <p class="establishes"><strong>What this establishes:</strong> no single naturalistic explanation is fully adequate, and the resurrection hypothesis has real explanatory power. It does not establish that the resurrection is the best explanation.</p>
+      
+      </section>
+      
+      <section id="gospel-divergences">
+      <h2>Why the Gospel accounts diverge</h2>
+      <p>The four Gospels disagree about who went to the tomb, what they saw, and where and to whom Jesus first appeared. Mark has a young man and terrified women; Matthew adds an earthquake, an angel, and guards; Luke has two men, Emmaus, and an ascension that day; John has two angels, a garden meeting, Thomas, and breakfast by the sea. The table lays out the differences.</p>
+      <p>Some differences fit different authors selecting different details. Others do not. Mark says the women told no one; Matthew says they ran to tell the disciples. Mark has the stone already rolled away; Matthew has an angel roll it back. Luke puts the ascension on resurrection day; Acts puts it forty days later. These are signs of literary development and theological shaping.</p>
+      <p>The most economical explanation is that Matthew and Luke used Mark, each reshaping the tradition for his own purposes. The Synoptic problem is the standard solution to the literary relationships among the first three Gospels.<sup class="fn"><a href="#fn20" id="ref20">20</a></sup> John is independent in many respects but is the latest and most theologically developed. The divergence does not prove nothing happened. It does show that the Gospels are not four independent eyewitness depositions, and that the physical details on which the later apologetic case depends are the product of a developing tradition.</p>
+      <p class="establishes"><strong>What this establishes:</strong> the Gospel narratives are literarily related and theologically shaped. It does not establish that the core proclamation is false, but it removes the strongest reason to treat the Gospel details as independent reports.</p>
+      
+      <details class="evidence">
+      <summary>The appearance lists compared</summary>
+      <div class="evidence-body">
+      <div class="table-wrap">
+      <table>
+      <thead><tr><th>Source</th><th>Appearances and locations</th></tr></thead>
+      <tbody>
+      <tr><th scope="row">1 Corinthians 15 (c. 50)</th><td>Cephas, the Twelve, 500 at once, James, all the apostles, Paul. No locations; no tomb; no women.</td></tr>
+      <tr><th scope="row">Mark (c. 70)</th><td>No appearance in the earliest text. The longer ending adds an appearance to Mary Magdalene.</td></tr>
+      <tr><th scope="row">Matthew (c. 80–90)</th><td>To the women near the tomb (28:9); to the eleven on a mountain in Galilee (28:16).</td></tr>
+      <tr><th scope="row">Luke (c. 80–90)</th><td>To two disciples on the road to Emmaus (24:13–15); to the eleven in Jerusalem (24:36); ascension at Bethany (24:50–51).</td></tr>
+      <tr><th scope="row">John (c. 90–100)</th><td>To Mary Magdalene at the tomb (20:14–16); to the disciples in Jerusalem (20:19); to Thomas eight days later (20:26); to seven disciples by the Sea of Tiberias (21:1–14).</td></tr>
+      </tbody>
+      </table>
+      </div>
+      </div>
+      </details>
+      </section>
+      
+      <section id="conclusion">
+      <h2>What history can and cannot establish</h2>
+      <p>The historical evidence can establish several things with reasonable confidence. Jesus was crucified under Pontius Pilate. Some followers had experiences they interpreted as appearances of him alive. Those experiences were early, widespread, and transformative. The movement survived its founder and grew. The Gospels are later, literarily related, and theologically shaped.</p>
+      <p>The evidence cannot establish the central claim: that the tomb was empty, that the appearances were physical, or that God raised Jesus. Paul gives the belief without the bodily details; the later sources give the details with the apologetic motives. The empty tomb is first narrated decades later; the physical demonstrations are later still; the five hundred are unverifiable; the martyrdom traditions are partly legendary. What would change the verdict? An early, independent, non-confessional source naming the tomb and the appearances; archaeological evidence; a hostile witness who could have checked the body; a pre-Pauline tradition describing a physical appearance rather than a revelation. None exists.</p>
+      <p>The honest conclusion is not that the resurrection is certainly false. It is that the historical evidence does not make it probable. The resurrection remains possible—nothing rules it out—but possibility is not proof, and the claim carries a weight the evidence cannot bear. Christianity may still be true, but if it is, it is true on grounds beyond the historical case, and the historical case is weaker than its defenders claim.</p>
+      <p class="establishes"><strong>The verdict:</strong> the evidence supports the disciples’ belief and the movement’s transformation. It does not support the bodily resurrection, the empty tomb, or the Easter narrative as history. The resurrection is possible, but not probable, on the evidence available.</p>
+      
+      </section>
+      
+      <section id="notes" class="notes" data-toc="false">
+      <h2>Notes</h2>
+      <ol class="footnotes">
+      <li id="fn1">1 Corinthians 15:14–19, ESV, <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A14-19&amp;version=ESV">Bible Gateway</a>. <a href="#ref1" class="back">↩</a></li>
+      <li id="fn2">1 Corinthians 15:3–8, ESV, <a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015%3A3-8&amp;version=ESV">Bible Gateway</a>. The Greek verb is ὤφθη, the passive of ὁράω, “he appeared” or “he was seen.” <a href="#ref2" class="back">↩</a></li>
+      <li id="fn3">On the date and pre-Pauline character of the tradition, see Gerd Lüdemann, <em>The Resurrection of Jesus: History, Experience, Theology</em> (Fortress, 1994); Bart D. Ehrman, <em>How Jesus Became God</em> (HarperOne, 2014); James D. G. Dunn, <em>Jesus Remembered</em> (Eerdmans, 2003). <a href="#ref3" class="back">↩</a></li>
+      <li id="fn4">1 Corinthians 15:3–8, ESV; Raymond E. Brown, <em>The Death of the Messiah</em> (Doubleday, 1994), on the passion and kerygmatic traditions. <a href="#ref4" class="back">↩</a></li>
+      <li id="fn5">Mark 16:1–8, ESV, <a href="https://www.biblegateway.com/passage/?search=Mark%2016%3A1-8&amp;version=ESV">Bible Gateway</a>. <a href="#ref5" class="back">↩</a></li>
+      <li id="fn6">On the case for the tomb, see William Lane Craig, <em>The Historical Argument for the Resurrection of Jesus</em> (Edwin Mellen, 1985); Michael R. Licona, <em>The Resurrection of Jesus: A New Historiographical Approach</em> (IVP Academic, 2010). <a href="#ref6" class="back">↩</a></li>
+      <li id="fn7">On the case against, see Ehrman, <em>How Jesus Became God</em>; Dale C. Allison Jr., <em>The Resurrection of Jesus: Apologetics, Polemics, History</em> (Bloomsbury T&amp;T Clark, 2021). <a href="#ref7" class="back">↩</a></li>
+      <li id="fn8">On Roman crucifixion and burial, see Martin Hengel, <em>Crucifixion in the Ancient World</em> (Fortress, 1977); Ehrman, <em>How Jesus Became God</em>. <a href="#ref8" class="back">↩</a></li>
+      <li id="fn9">Bruce M. Metzger, <em>A Textual Commentary on the Greek New Testament</em>, 2nd ed. (Deutsche Bibelgesellschaft, 1994), on Mark 16:9–20. <a href="#ref9" class="back">↩</a></li>
+      <li id="fn10">1 Corinthians 15:5–8, ESV; on ὤφθη and the language of appearance, see the standard lexica (BDAG, s.v. ὁράω) and Allison, <em>The Resurrection of Jesus</em>. <a href="#ref10" class="back">↩</a></li>
+      <li id="fn11">Galatians 1:15–16, ESV, <a href="https://www.biblegateway.com/passage/?search=Galatians%201%3A15-16&amp;version=ESV">Bible Gateway</a>; the Greek phrase is ἐν ἐμοί. <a href="#ref11" class="back">↩</a></li>
+      <li id="fn12">1 Corinthians 9:1; 2 Corinthians 12:1–4, ESV. <a href="#ref12" class="back">↩</a></li>
+      <li id="fn13">1 Corinthians 15:44, 50, ESV. <a href="#ref13" class="back">↩</a></li>
+      <li id="fn14">Luke 24:39; John 20:27; John 21:9–13, ESV. <a href="#ref14" class="back">↩</a></li>
+      <li id="fn15">Acts 9:7; 22:9; 26:13–14, ESV. <a href="#ref15" class="back">↩</a></li>
+      <li id="fn16">1 Corinthians 15:7; Galatians 1:19; Acts 15:13; John 7:5; Acts 1:14, ESV. <a href="#ref16" class="back">↩</a></li>
+      <li id="fn17">Gary R. Habermas and Michael R. Licona, <em>The Case for the Resurrection of Jesus</em> (Kregel, 2004). <a href="#ref17" class="back">↩</a></li>
+      <li id="fn18">Tacitus, <em>Annals</em> 15.44, <a href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D15%3Achapter%3D44">Perseus</a>; Josephus, <em>Antiquities</em> 18.63, <a href="https://www.perseus.tufts.edu/hopper/text?doc=J.+AJ+18.63&amp;_pc=1">Perseus</a> (the Testimonium is partly interpolated and should be used with caution). <a href="#ref18" class="back">↩</a></li>
+      <li id="fn19">Acts 12:2; <em>1 Clement</em> 5; Candida R. Moss, <em>The Myth of Persecution</em> (HarperOne, 2013); Sean McDowell, <em>The Fate of the Apostles</em> (Ashgate, 2015). <a href="#ref19" class="back">↩</a></li>
+      <li id="fn20">Mark Goodacre, <em>The Synoptic Problem: A Way Through the Maze</em> (Continuum, 2001); Ehrman, <em>How Jesus Became God</em>; Brown, <em>The Death of the Messiah</em>. <a href="#ref20" class="back">↩</a></li>
+      <li id="fn21">On the explanatory scope and limits of the resurrection hypothesis, see Michael R. Licona, <em>The Resurrection of Jesus: A New Historiographical Approach</em> (IVP Academic, 2010); N. T. Wright, <em>The Resurrection of the Son of God</em> (Fortress, 2003). <a href="#ref21" class="back">↩</a></li>
+      <li id="fn22">On bereavement visions and the psychology of appearance experiences, see Allison, <em>The Resurrection of Jesus</em>; Ehrman, <em>How Jesus Became God</em>. <a href="#ref22" class="back">↩</a></li>
+      </ol>
+      </section>
+      
+      <section id="sources" class="sources" data-toc="false">
+      <h2>Sources</h2>
+      <h3>Primary texts</h3>
+      <ul>
+      <li><a href="https://www.biblegateway.com/passage/?search=1%20Corinthians%2015&amp;version=ESV">1 Corinthians 15</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Galatians%201&amp;version=ESV">Galatians 1</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=2%20Corinthians%2012&amp;version=ESV">2 Corinthians 12</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Mark%2016&amp;version=ESV">Mark 16</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Matthew%2028&amp;version=ESV">Matthew 28</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Luke%2024&amp;version=ESV">Luke 24</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=John%2020&amp;version=ESV">John 20</a> (ESV).</li>
+      <li><a href="https://www.biblegateway.com/passage/?search=Acts%209&amp;version=ESV">Acts 9</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2022&amp;version=ESV">22</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2026&amp;version=ESV">26</a>, <a href="https://www.biblegateway.com/passage/?search=Acts%2012&amp;version=ESV">12</a> (ESV).</li>
+      <li><a href="https://www.perseus.tufts.edu/hopper/text?doc=Perseus%3Atext%3A1999.02.0078%3Abook%3D15%3Achapter%3D44">Tacitus, <em>Annals</em> 15.44</a> (Perseus).</li>
+      <li><a href="https://www.perseus.tufts.edu/hopper/text?doc=J.+AJ+18.63&amp;_pc=1">Josephus, <em>Antiquities</em> 18.63</a> (Perseus; partly interpolated).</li>
+      <li><a href="https://www.earlychristianwritings.com/text/1clement-roberts.html">1 Clement 5</a> (early Christian writings).</li>
+      </ul>
+      <h3>Secondary literature</h3>
+      <ul>
+      <li>Dale C. Allison Jr., <em>The Resurrection of Jesus: Apologetics, Polemics, History</em> (Bloomsbury T&amp;T Clark, 2021).</li>
+      <li>Raymond E. Brown, <em>The Death of the Messiah</em>, 2 vols. (Doubleday, 1994).</li>
+      <li>William Lane Craig, <em>The Historical Argument for the Resurrection of Jesus</em> (Edwin Mellen, 1985).</li>
+      <li>Bart D. Ehrman, <em>How Jesus Became God</em> (HarperOne, 2014).</li>
+      <li>James D. G. Dunn, <em>Jesus Remembered</em> (Eerdmans, 2003).</li>
+      <li>Mark Goodacre, <em>The Synoptic Problem: A Way Through the Maze</em> (Continuum, 2001).</li>
+      <li>Gary R. Habermas and Michael R. Licona, <em>The Case for the Resurrection of Jesus</em> (Kregel, 2004).</li>
+      <li>Martin Hengel, <em>Crucifixion in the Ancient World</em> (Fortress, 1977).</li>
+      <li>Michael R. Licona, <em>The Resurrection of Jesus: A New Historiographical Approach</em> (IVP Academic, 2010).</li>
+      <li>Gerd Lüdemann, <em>The Resurrection of Jesus: History, Experience, Theology</em> (Fortress, 1994).</li>
+      <li>Bruce M. Metzger, <em>A Textual Commentary on the Greek New Testament</em>, 2nd ed. (Deutsche Bibelgesellschaft, 1994).</li>
+      <li>Walter Bauer, Frederick W. Danker, William F. Arndt, and F. Wilbur Gingrich, <em>A Greek-English Lexicon of the New Testament and Other Early Christian Literature</em>, 3rd ed. (University of Chicago Press, 2000).</li>
+      <li>Candida R. Moss, <em>The Myth of Persecution</em> (HarperOne, 2013).</li>
+      <li>Sean McDowell, <em>The Fate of the Apostles</em> (Ashgate, 2015).</li>
+      <li>N. T. Wright, <em>The Resurrection of the Son of God</em> (Fortress, 2003).</li>
+      </ul>
+      <p class="source-note">This case file is English-only for now. Translations will follow once the English text is final.</p>
+      </section>`,
       "sources": [
         {
-          "label": "Bart D. Ehrman, Jesus, Interrupted (2009)",
-          "url": "https://www.harpercollins.com/products/jesus-interrupted-bart-d-ehrman"
+          "label": "1 Corinthians 15 (ESV)",
+          "url": "https://www.biblegateway.com/passage/?search=1%20Corinthians%2015&version=ESV"
         },
         {
-          "label": "Michael R. Licona, The Resurrection of Jesus (2010)",
-          "url": "https://openlibrary.org/works/OL15578799W"
+          "label": "Mark 16 (ESV)",
+          "url": "https://www.biblegateway.com/passage/?search=Mark%2016&version=ESV"
         },
         {
-          "label": "Richard Bauckham, Jesus and the Eyewitnesses (2006)",
-          "url": "https://openlibrary.org/works/OL20821474W"
-        },
-        {
-          "label": "Raymond E. Brown, The Death of the Messiah (1994)",
-          "url": "https://yalebooks.yale.edu/book/9780300140187/the-death-of-the-messiah/"
-        },
-        {
-          "label": "Mark Goodacre, The Synoptic Problem: A Way Through the Maze (2001)",
-          "url": "https://openlibrary.org/works/OL8385345W"
+          "label": "Galatians 1 (ESV)",
+          "url": "https://www.biblegateway.com/passage/?search=Galatians%201&version=ESV"
         }
       ]
     },

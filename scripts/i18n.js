@@ -76,6 +76,7 @@ function buildTranslations(options = {}) {
 
   if (!fs.existsSync(outDir)) fs.mkdirSync(outDir, { recursive: true });
 
+  const translatable = deck.cards.filter((card) => card.type !== 'essay');
   const codes = Object.keys(store).filter((code) => store[code] && /^[a-z]{2,3}(-[A-Za-z0-9]{2,8})?$/.test(code));
   const order = Object.keys(languages);
   codes.sort((a, b) => {
@@ -90,6 +91,7 @@ function buildTranslations(options = {}) {
     const source = store[code];
     const cards = {};
     for (const card of deck.cards) {
+      if (card.type === 'essay') continue;
       const translated = source.cards && source.cards[card.slug];
       if (!translated) continue;
       const clean = {};
@@ -108,7 +110,7 @@ function buildTranslations(options = {}) {
       if (Object.keys(ui).length) data.ui = ui;
     }
 
-    const complete = deck.cards.filter((card) => {
+    const complete = translatable.filter((card) => {
       const translated = cards[card.slug];
       return translated && FIELDS.every((field) => typeof translated[field] === 'string' && translated[field].trim());
     }).length;
@@ -125,7 +127,7 @@ function buildTranslations(options = {}) {
       english: meta.english || code,
       dir: meta.dir || 'ltr',
       cards: complete,
-      total: deck.cards.length
+      total: translatable.length
     });
     summary.push({ code, cards: complete, total: deck.cards.length, bytes: Buffer.byteLength(body) });
   }
@@ -183,6 +185,7 @@ function validateTranslations(options = {}) {
     }
 
     for (const card of deck.cards) {
+      if (card.type === 'essay') continue;
       const translated = source.cards && source.cards[card.slug];
       if (!translated) { errors.push(where(card.slug) + ': missing card'); continue; }
       for (const field of FIELDS) {

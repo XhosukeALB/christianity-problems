@@ -14,6 +14,7 @@ const { loadDeck, buildTranslations } = require('./scripts/i18n');
 const ROOT = __dirname;
 const DIST = path.join(ROOT, 'dist');
 const TEMPLATE = path.join(ROOT, 'index.html');
+const ESSAY_TEMPLATE = path.join(ROOT, 'essay.html');
 const BASE_URL = 'https://christianity-problems.pages.dev';
 const SITE_NAME = 'Christianity’s Problems';
 
@@ -31,6 +32,120 @@ function copyFile(source, target) {
   fs.copyFileSync(source, target);
 }
 
+
+function stripTags(html) {
+  return String(html).replace(/<[^>]+>/g, ' ').replace(/&[a-z#0-9]+;/gi, ' ').replace(/\s+/g, ' ').trim();
+}
+
+function visibleWords(body) {
+  const stripped = body
+    .replace(/<details[\s\S]*?<\/details>/g, ' ')
+    .replace(/<section id="notes"[\s\S]*?<\/section>/g, ' ')
+    .replace(/<section id="sources"[\s\S]*?<\/section>/g, ' ');
+  return stripTags(stripped).split(/\s+/).filter(Boolean).length;
+}
+
+function countNotes(body) {
+  return (body.match(/id="fn\d+"/g) || []).length;
+}
+
+function extractToc(body) {
+  const items = [];
+  const pattern = /<section id="([^"]+)"([^>]*)>[\s\S]*?<h2[^>]*>([\s\S]*?)<\/h2>/g;
+  let match;
+  while ((match = pattern.exec(body))) {
+    if (/data-toc="false"/.test(match[2])) continue;
+    items.push({ id: match[1], title: stripTags(match[3]) });
+  }
+  return items;
+}
+
+const MONTHS = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+function formatDate(iso) {
+  const parts = String(iso || '').split('-').map(Number);
+  if (parts.length !== 3 || parts.some(Number.isNaN)) return String(iso || '');
+  return parts[2] + ' ' + MONTHS[parts[1] - 1] + ' ' + parts[0];
+}
+
+function essayMeta(card, url, words, minutes, notes) {
+  const description = card.subtitle || card.summary || card.claim;
+  const article = {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: card.title,
+    description,
+    url,
+    mainEntityOfPage: { '@type': 'WebPage', '@id': url },
+    datePublished: card.updated,
+    dateModified: card.updated,
+    author: { '@type': 'Organization', name: SITE_NAME, url: BASE_URL + '/' },
+    publisher: {
+      '@type': 'Organization',
+      name: SITE_NAME,
+      logo: { '@type': 'ImageObject', url: BASE_URL + '/assets/og.png' }
+    },
+    wordCount: words,
+    timeRequired: 'PT' + minutes + 'M',
+    about: [
+      { '@type': 'Thing', name: 'Resurrection of Jesus' },
+      { '@type': 'Thing', name: 'Historical Jesus' }
+    ],
+    isPartOf: { '@type': 'WebSite', name: SITE_NAME, url: BASE_URL + '/' },
+    inLanguage: 'en'
+  };
+  const breadcrumbs = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: [
+      { '@type': 'ListItem', position: 1, name: SITE_NAME, item: BASE_URL + '/' },
+      { '@type': 'ListItem', position: 2, name: card.title, item: url }
+    ]
+  };
+  return [
+    '<meta name="description" content="' + esc(description) + '" />',
+    '<meta property="og:type" content="article" />',
+    '<meta property="og:site_name" content="' + esc(SITE_NAME) + '" />',
+    '<meta property="og:title" content="' + esc(card.title) + '" />',
+    '<meta property="og:description" content="' + esc(description) + '" />',
+    '<meta property="og:url" content="' + esc(url) + '" />',
+    '<meta property="og:image" content="' + BASE_URL + '/assets/og.png" />',
+    '<meta property="og:image:width" content="1200" />',
+    '<meta property="og:image:height" content="630" />',
+    '<meta property="article:published_time" content="' + esc(card.updated) + '" />',
+    '<meta property="article:modified_time" content="' + esc(card.updated) + '" />',
+    '<meta name="twitter:card" content="summary_large_image" />',
+    '<meta name="twitter:title" content="' + esc(card.title) + '" />',
+    '<meta name="twitter:description" content="' + esc(description) + '" />',
+    '<meta name="twitter:image" content="' + BASE_URL + '/assets/og.png" />',
+    '<link rel="canonical" href="' + esc(url) + '" />',
+    '<script type="application/ld+json">' + JSON.stringify(article).replace(/</g, '\\u003c') + '</script>',
+    '<script type="application/ld+json">' + JSON.stringify(breadcrumbs).replace(/</g, '\\u003c') + '</script>'
+  ].join('\n');
+}
+
+function buildEssayPage(card) {
+  const body = card.body;
+  const words = visibleWords(body);
+  const minutes = Math.max(1, Math.round(words / 220));
+  const notes = countNotes(body);
+  const url = BASE_URL + '/' + card.slug + '/';
+  const tocHtml = extractToc(body).map((item) => '<li><a href="#' + item.id + '">' + esc(item.title) + '</a></li>').join('');
+  let html = fs.readFileSync(ESSAY_TEMPLATE, 'utf8');
+  html = html.replace('<title><!--TITLE--></title>', '<title>' + esc(card.title + ' — ' + SITE_NAME) + '</title>');
+  html = html.replace('<!--HEAD_META-->', essayMeta(card, url, words, minutes, notes));
+  html = html.replace('<!--KICKER-->', esc(card.kicker + ' · Case file'));
+  html = html.replace('<!--TITLE_TEXT-->', esc(card.title));
+  html = html.replace('<!--SUBTITLE-->', esc(card.subtitle || ''));
+  html = html.replace('<!--CLAIM-->', esc(card.claim || ''));
+  html = html.replace('<!--VERDICT-->', esc(card.verdict || ''));
+  html = html.replace('<!--READING-->', minutes + ' min read');
+  html = html.replace('<!--NOTES-->', notes + ' notes');
+  html = html.replace('<!--UPDATED-->', formatDate(card.updated));
+  html = html.replace('<!--TOC-->', tocHtml);
+  html = html.replace('<!--BODY-->', body);
+  return html;
+}
+
 function staticDeck(deck) {
   const ui = deck.ui;
   const dir = 'ltr';
@@ -38,6 +153,18 @@ function staticDeck(deck) {
     + '<li class="desktop-hint">' + ui.hint1 + '</li><li class="mobile-hint">' + esc(ui.hintSwipe) + '</li><li class="desktop-hint">' + ui.hint2 + '</li><li class="desktop-hint">' + ui.hint3 + '</li><li>' + ui.hint4 + '</li></ul></div></div>';
 
   for (const card of deck.cards) {
+    if (card.type === 'essay') {
+      html += '<div class="slide" dir="ltr" data-slug="' + esc(card.slug) + '">'
+        + '<div class="card-inner essay-index">'
+        + '<div class="card-kicker">' + esc(card.kicker) + ' · Case file</div>'
+        + '<h2 class="card-title">' + esc(card.title) + '</h2>'
+        + '<p class="card-claim">' + esc(card.summary || card.claim) + '</p>'
+        + '<p class="essay-verdict">' + esc(card.verdict || '') + '</p>'
+        + '<div class="essay-meta">' + (card.readingTime || 15) + ' min read · English only</div>'
+        + '<a class="essay-cta" href="/' + esc(card.slug) + '/">Read the full case <span aria-hidden="true">→</span></a>'
+        + '</div></div>';
+      continue;
+    }
     const sources = (card.sources || []).map((source) => {
       const external = /^https?:\/\//.test(source.url);
       return '<li><a class="source-link" dir="auto" href="' + esc(source.url) + '"' + (external ? ' target="_blank" rel="noopener noreferrer"' : '') + '>' + esc(source.label) + '</a></li>';
@@ -190,6 +317,10 @@ function main() {
   for (const card of deck.cards) {
     const cardDir = path.join(DIST, card.slug);
     fs.mkdirSync(cardDir, { recursive: true });
+    if (card.type === 'essay') {
+      atomicWrite(path.join(cardDir, 'index.html'), buildEssayPage(card));
+      continue;
+    }
     const page = buildPage(template, deck, {
       title: card.title + ' — Christianity’s Problems',
       headline: card.title,
@@ -206,12 +337,16 @@ function main() {
   let sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n';
   sitemap += '  <url><loc>' + BASE_URL + '/</loc><lastmod>' + today + '</lastmod><priority>1.0</priority></url>\n';
   for (const card of deck.cards) {
-    sitemap += '  <url><loc>' + BASE_URL + '/' + card.slug + '/</loc><lastmod>' + today + '</lastmod><priority>0.8</priority></url>\n';
+    const priority = card.type === 'essay' ? '0.9' : '0.8';
+    sitemap += '  <url><loc>' + BASE_URL + '/' + card.slug + '/</loc><lastmod>' + today + '</lastmod><priority>' + priority + '</priority></url>\n';
   }
   sitemap += '</urlset>\n';
   atomicWrite(path.join(DIST, 'sitemap.xml'), sitemap);
 
   atomicWrite(path.join(DIST, 'robots.txt'), 'User-agent: *\nAllow: /\nSitemap: ' + BASE_URL + '/sitemap.xml\n');
+
+  const redirectsFile = path.join(ROOT, '_redirects');
+  if (fs.existsSync(redirectsFile)) copyFile(redirectsFile, path.join(DIST, '_redirects'));
 
   atomicWrite(path.join(DIST, '_headers'), [
     '/*',

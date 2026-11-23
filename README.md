@@ -1,6 +1,6 @@
 # Christianity’s Problems — Evidence Deck
 
-A static, multilingual evidence deck about Christianity’s historical, philosophical, and moral problems. Each card separates what the texts say from what the evidence shows, states the strongest counterarguments, and rates its conclusions as possible, plausible, or probable.
+A static, multilingual evidence deck and long-form case files about Christianity’s historical, philosophical, and moral problems. Each card separates what the texts say from what the evidence shows, states the strongest counterarguments, and rates its conclusions as possible, plausible, or probable.
 
 Live site: <https://christianity-problems.pages.dev/>
 
@@ -25,9 +25,9 @@ npm run build
 `build.js` writes a self-contained `dist/` directory:
 
 - `dist/index.html` — the deck, with all English content pre-rendered for crawlers
-- `dist/<slug>/index.html` — one crawlable page per card, with its own title, description, canonical URL, and JSON-LD
+- `dist/<slug>/index.html` — one crawlable page per card; case files (`type: "essay"`) use the reading template with a table of contents and article JSON-LD
 - `dist/translations/<code>.js` — one lazy-loaded file per language
-- `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`, `dist/_headers`
+- `dist/sitemap.xml`, `dist/robots.txt`, `dist/404.html`, `dist/_headers`, `dist/_redirects`
 
 Deploy `dist/` to Cloudflare Pages (build command `npm run build`, output directory `dist`), Netlify, or any static host. The `_headers` file adds sensible security and caching headers on Cloudflare Pages.
 
@@ -36,12 +36,13 @@ Deploy `dist/` to Cloudflare Pages (build command `npm run build`, output direct
 | File | Purpose |
 | --- | --- |
 | `index.html` | The app shell: layout, styles, and client logic. |
+| `essay.html` | The long-form case-file template: reading layout, TOC, footnotes, evidence drawers, print styles. |
 | `cards.js` | English content. The single source of truth for cards and UI strings. |
 | `translations.json` | Translation store (source of truth, includes source hashes). |
 | `translations.js` | Generated language index. Do not edit by hand. |
 | `translations/<code>.js` | Generated per-language data, loaded on demand. Do not edit by hand. |
 | `languages.json` | Native names, English names, and text direction per language. |
-| `build.js` | Static build: per-card pages, sitemap, robots, 404, headers. |
+| `build.js` | Static build: card pages, essay pages, TOC/reading time, sitemap, redirects, headers. |
 | `serve.js` | Zero-dependency local preview server. |
 | `translate.js` | Optional Gemini pipeline for adding new languages. |
 | `scripts/i18n.js` | Shared build/validation helpers for translations. |
@@ -49,6 +50,7 @@ Deploy `dist/` to Cloudflare Pages (build command `npm run build`, output direct
 | `scripts/assemble-parts.js` | Merges validated parts into `translations.json`. |
 | `scripts/validate-translations.js` | Validates every shipped language. |
 | `scripts/visual-check.cjs` | Optional Puppeteer smoke test (needs a local Chrome). |
+| `docs/quote-ledger-resurrection.md` | Quotation and citation audit for the first case file. |
 
 ## Editing content
 
@@ -72,6 +74,38 @@ Cards live in `cards.js`:
 
 UI strings live in the `ui` object at the top of `cards.js`. `hint1` intentionally contains HTML (`<span class="keycap">`); all other strings are plain text. `cardOf` uses `{n}` and `{total}` placeholders.
 
+### Case files
+
+Some arguments are cumulative rather than evidentiary, so they use a long-form case file instead of a card of drawers. A case file is a card entry with `"type": "essay"`:
+
+```js
+{
+  "slug": "resurrection",
+  "type": "essay",
+  "kicker": "History",
+  "title": "The resurrection of Jesus",
+  "subtitle": "One-sentence standfirst.",
+  "claim": "The thesis, shown at the top of the page and on the deck summary.",
+  "summary": "Short deck-index blurb.",
+  "verdict": "The calibrated verdict, shown in the summary and the thesis box.",
+  "updated": "2026-11-23",
+  "readingTime": 15,
+  "body": `<section id="stakes"><h2>…</h2>…</section>`,
+  "sources": [{ "label": "1 Corinthians 15 (ESV)", "url": "https://…" }]
+}
+```
+
+Rules for the format:
+
+- The argument itself is always visible prose. `<details class="evidence">` is only for primary texts, comparison tables, and manuscript data.
+- Each `<section>` needs an `id`; the build generates the table of contents from its `<h2>`.
+- Sections with `data-toc="false"` (notes, sources) are excluded from the TOC.
+- Footnotes use `<sup class="fn"><a href="#fn1" id="ref1">1</a></sup>` and a matching `<li id="fn1">` in the notes section.
+- Build computes visible word count and reading time, and emits `Article` + `BreadcrumbList` JSON-LD.
+- The deck renders a summary slide with the claim, verdict, reading time, and a link to `/<slug>/`; the full body is not loaded into the deck.
+- `/resurrection-contradictions/` is 301-redirected to `/resurrection/` in `_redirects`.
+- Quotes must be checked against a named edition. Anything that cannot be confirmed is paraphrased, not quoted. The audit for the first case file is in `docs/quote-ledger-resurrection.md`.
+
 ## Translations
 
 The deck ships with six complete languages:
@@ -86,6 +120,8 @@ The deck ships with six complete languages:
 | `id` | Bahasa Indonesia | LTR |
 
 English is the original. Every other language is labelled as machine translated in the interface, and the English original remains authoritative.
+
+The translations currently cover the seven deck cards. Case files are English-only in this prototype: `validateTranslations` skips `type: "essay"` entries, and the deck falls back to English for the essay summary. Translating the long-form case changes its `_src` hash and is deliberately deferred until the English text is final.
 
 ### How it works
 

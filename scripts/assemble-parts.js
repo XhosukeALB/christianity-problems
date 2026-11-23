@@ -37,6 +37,7 @@ function main() {
 
     const cards = {};
     for (const card of deck.cards) {
+      if (card.type === 'essay') continue;
       const translated = readJson(path.join(dir, card.slug + '.json'));
       const clean = {};
       for (const field of FIELDS) clean[field] = translated[field];
@@ -45,7 +46,7 @@ function main() {
     }
 
     store[lang] = { ui: cleanUi, uiSrc: uiHash(deck.ui), cards };
-    console.log(lang + ': assembled ' + deck.cards.length + ' cards');
+    console.log(lang + ': assembled ' + deck.cards.filter((card) => card.type !== 'essay').length + ' cards (essays stay English)');
   }
 
   if (failures) { process.exitCode = 1; return; }
