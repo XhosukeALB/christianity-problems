@@ -43,3 +43,21 @@ No direct quotations from modern scholars are used. Scholarly positions are para
 - No unconfirmed quotation marks remain in the case file.
 - Where the ESV wording was not suitable as a stand-alone sentence, the sentence was paraphrased instead of silently altered.
 - The quotation from Galatians ends with a semicolon because that is the ESV punctuation at the end of verse 16; the following clause is not part of the quotation.
+
+## Revision audit (23 November 2026)
+
+The revised case file was re-checked after the second round of edits.
+
+- **1 Corinthians date.** The date was corrected to c. 54–55 (about twenty-five years after the crucifixion) in the prose and in the appearance-list table. This is a historical judgment, not a quotation.
+- **ὤφθη.** The essay now says explicitly that the verb is neutral and that context decides its force. Footnote 10 cites BDAG, s.v. ὁράω, and Allison. No claim is made that the verb by itself proves a non-physical appearance.
+- **2 Corinthians 12.** The passage is now framed as an analogy of Paul’s visionary vocabulary, not as an account of the resurrection appearance. The quotation itself is unchanged and still matches 2 Corinthians 12:1–2 (ESV). Footnote 12 states the analogy explicitly, and the evidence drawer says the same.
+- **The *akouō* reply.** The grammatical claim was checked against the SBLGNT text: Acts 9:7 reads ἀκούοντες μὲν τῆς φωνῆς (genitive), while Acts 22:9 reads τὴν φωνὴν οὐκ ἤκουσαν (accusative). Sources: <https://www.biblegateway.com/passage/?search=Acts%209%3A7&version=SBLGNT> and <https://www.biblegateway.com/passage/?search=Acts%2022%3A9&version=SBLGNT>. The essay presents the “hear”/“understand” distinction as a possible reading, not as a certainty, and notes the remaining differences.
+- **Wright, Licona, and Hume.** These positions are paraphrased in the essay; no direct quotations from them are used. Bibliographic details:
+  - N. T. Wright, *The Resurrection of the Son of God* (Fortress, 2003).
+  - Michael R. Licona, *The Resurrection of Jesus: A New Historiographical Approach* (IVP Academic, 2010).
+  - David Hume, *An Enquiry Concerning Human Understanding* (1748), §10, “Of Miracles.”
+- **Group appearances.** The earlier, unsourced claim that group experiences can be shared in high-expectation settings was removed. The revised text explicitly weakens the claim and does not rest the argument on a contested psychology of group hallucination.
+- **Footnotes.** All 27 footnotes were renumbered in order of first appearance, and every reference/backlink pair was checked programmatically. The notes list is sorted 1–27 with no gaps or duplicates.
+- **Quotations.** All six blockquotes were re-verified against the ESV text. The inline phrases listed above were re-checked. No unconfirmed quotation marks remain.
+
+If a future edit adds a quotation from a modern scholar, it must be checked against a named edition and page before it is published; otherwise it should be paraphrased, as the modern-scholarship sections here are.

@@ -99,8 +99,9 @@ h1 { margin:0 0 1rem; font:400 clamp(2.5rem,6vw,4.7rem)/.98 var(--display); lett
 .toc-title { margin:0 0 .7rem; font:800 .6rem/1.2 var(--sans); letter-spacing:.24em; text-transform:uppercase; color:var(--gold-2); }
 .toc ol { list-style:none; margin:0; padding:0; display:grid; gap:.15rem; counter-reset:toc; }
 .toc li { counter-increment:toc; }
-.toc a { display:block; padding:.38rem 0; color:var(--muted); text-decoration:none; font:500 .82rem/1.35 var(--sans); }
-.toc a::before { content:counter(toc,decimal-leading-zero); margin-inline-end:.6rem; color:var(--faint); font-size:.68rem; letter-spacing:.05em; }
+.toc a { display:flex; align-items:baseline; gap:.55rem; padding:.38rem 0; color:var(--muted); text-decoration:none; font:500 .82rem/1.35 var(--sans); }
+.toc a:focus-visible { outline:2px solid var(--focus); outline-offset:2px; border-radius:3px; }
+.toc a::before { content:counter(toc,decimal-leading-zero); flex:0 0 1.6em; color:var(--faint); font-size:.68rem; letter-spacing:.05em; }
 .toc a:hover { color:var(--ink-strong); }
 .toc a.active { color:var(--gold-2); font-weight:700; }
 .toc a.active::before { color:var(--gold-2); }
@@ -124,6 +125,15 @@ sup.fn a { text-decoration:none; }
 .prose cite { display:block; margin-top:.5rem; font:700 .7rem/1.4 var(--sans); letter-spacing:.06em; text-transform:uppercase; color:var(--gold-2); font-style:normal; }
 .prose .establishes { margin:1.6rem 0 1.4rem; padding:.85rem 1rem; border:1px solid var(--hairline); border-inline-start:3px solid var(--gold); border-radius:8px; background:rgb(var(--gold-rgb)/.04); font:500 .94rem/1.6 var(--sans); color:var(--ink-soft); }
 .prose .establishes strong { color:var(--ink-strong); }
+.objection { margin:1.5rem 0; padding:1rem 1.1rem; border:1px solid var(--hairline); border-inline-start:3px solid var(--gold); border-radius:8px; background:rgb(var(--gold-rgb)/.03); }
+.objection p { margin:0 0 .65rem; max-width:none; }
+.objection p:last-child { margin-bottom:0; }
+.objection .label { margin:0 0 .5rem; font:800 .6rem/1.2 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--gold-2); }
+.objection .reply { font-size:.98rem; }
+.assumption { margin:1.5rem 0; padding:1rem 1.1rem; border:1px dashed var(--gold-edge); border-radius:8px; background:rgb(var(--gold-rgb)/.03); }
+.assumption p { margin:0; max-width:none; font:500 .92rem/1.6 var(--sans); color:var(--ink-soft); }
+.assumption .label { margin:0 0 .4rem; font:800 .6rem/1.2 var(--sans); letter-spacing:.18em; text-transform:uppercase; color:var(--gold-2); }
+.evidence-note { margin:0 0 .9rem; font:500 .8rem/1.5 var(--sans); color:var(--faint); }
 .sup, sup.fn { font-size:.68em; line-height:0; }
 sup.fn a { text-decoration:none; padding:0 .12em; color:var(--gold-2); font-weight:700; }
 sup.fn a:hover { text-decoration:underline; }
