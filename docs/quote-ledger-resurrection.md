@@ -92,3 +92,16 @@ Footnotes are now 30 in total, renumbered in order of appearance; every referenc
 - **No unconfirmed quotations.** No direct quotation from a modern scholar was introduced in this round.
 
 Footnotes are now 31, renumbered in order of appearance.
+
+## Final follow-up (25 November 2026)
+
+- **Prior-probability passage.** Now a proper section (`#prior-probability`) with an `<h2>` and a TOC entry, placed before the naturalistic-explanations section.
+- **Final verdict line.** Now reads: “The resurrection is possible, but not probable, on a naturalistic prior and the available evidence.”
+- **Objection 6.** “Were read as” changed to “may have been read as.”
+- **Objection 1.** The empty tomb and physical body are no longer called “auxiliary assumptions”; the reply says the hypothesis “presupposes” them, and the unsupported “fully only if they were physical” clause was dropped.
+- **Appearances section.** Added a “see Objection 4” link at the spiritual-body claim, with `#objection-4` as its target. The BDAG note for ὤφθη (note 10) was moved from the appearance list to the sentence about the verb’s neutrality.
+- **Updated date.** Set to 25 November 2026.
+- **Swinburne.** Rechecked against the publisher’s table of contents: *The Existence of God*, 2nd ed. (2004), ch. 12, “Arguments from History and Miracles,” pp. 273–292. The note now includes the page range.
+- **Duplicate heading check.** One “The prior-probability assumption” `<h2>`/TOC entry and one “Strongest objections” `<h2>` remain.
+
+All 31 notes were renumbered and checked after the moves. No unconfirmed quotations were added.
